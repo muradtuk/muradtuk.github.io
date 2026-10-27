@@ -1,87 +1,33 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-
+<!DOCTYPE html>
+<html lang="en" class="no-js">
 <head>
-  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
-  <style type="text/css">
-  /* Design Credits: Jon Barron and Abhishek Kar and Saurabh Gupta*/
-  a {
-  color: #1772d0;
-  text-decoration:none;
-  }
-  a:focus, a:hover {
-  color: #f09228;
-  text-decoration:none;
-  }
-  body,td,th {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 400
-  }
-  heading {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 19px;
-    font-weight: 1000
-  }
-  strong {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 16px;
-    font-weight: 800
-  }
-  strongred {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    color: 'red' ;
-    font-size: 16px
-  }
-  sectionheading {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 22px;
-    font-weight: 600
-  }
-  pageheading {
-    font-family: 'Titillium Web', Verdana, Helvetica, sans-serif;
-    font-size: 38px;
-    font-weight: 400
-  }
-  /* .pub-list {
-    list-style-type: "1";
-    padding-left: 20px;
-    max-width: 900px;
-  } */
-  .pub-list li {
-    margin-bottom: 25px;
-  }
-  .pub-links a {
-    color: #1772d0;
-    text-decoration: none;
-    margin-right: 8px;
-  }
-  .pub-links a:hover {
-    color: #f09228;
-  }
-  .abstract-container {
-    display: none;
-    overflow: hidden;
-    margin-top: 10px;
-  }
-  .abstract-content {
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
-  }
-  .abstract-content img {
-    max-width: 300px;
-    border-radius: 10px;
-    height: auto;
-  }
-  </style>
-  <link rel="icon" type="image/png" href="images/seal_icon.png">
-  <script type="text/javascript" src="js/hidebib.js"></script>
-  <title>Morad Tukan</title>
-  <meta name="Morad Tukan's Homepage" http-equiv="Content-Type" content="Morad Tukan's Homepage">
-  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
-  <!-- Start : Google Analytics Code -->
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Morad Tukan — Applied AI Researcher</title>
+  <meta name="description" content="Morad Tukan is an applied AI researcher at Camtek working on coresets, data and model compression, dataset distillation, submodular optimization, computational geometry and robotics.">
+  <meta name="theme-color" content="#070b16">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Morad Tukan — Applied AI Researcher">
+  <meta property="og:description" content="Coresets, data and model compression, dataset distillation, submodular optimization, computational geometry and robotics.">
+  <meta property="og:image" content="https://muradtuk.github.io/images/Morad.jpeg">
+  <meta property="og:url" content="https://muradtuk.github.io/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d1322'/%3E%3Ccircle cx='13' cy='17' r='5.2' fill='%23f6b73c'/%3E%3Ccircle cx='22' cy='10' r='2.3' fill='%234fd1c5'/%3E%3Ccircle cx='24.5' cy='21' r='1.9' fill='%234fd1c5'/%3E%3Ccircle cx='8' cy='8' r='1.7' fill='%234fd1c5'/%3E%3Ccircle cx='19' cy='26' r='1.5' fill='%234fd1c5'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Theme is applied before first paint to avoid a flash. Default: dark. -->
+  <script>
+    (function () {
+      document.documentElement.classList.remove('no-js');
+      var t = null;
+      try { t = new URLSearchParams(location.search).get('theme') || localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') t = 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+
   <!-- Google Tag Manager -->
   <script>
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -91,536 +37,1058 @@
     })(window,document,'script','dataLayer','GTM-5NXMJQRK');
   </script>
   <!-- End Google Tag Manager -->
-  <!-- End : Google Analytics Code -->
-  <!-- Scramble Script by Jeff Donahue -->
-  <script src="js/scramble.js"></script>
+
+  <style>
+    /* ---------- Design tokens ---------- */
+    :root {
+      --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-head: 'Space Grotesk', var(--font-sans);
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --max: 1120px;
+      --radius: 16px;
+    }
+    :root, :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #070b16;           --bg-rgb: 7, 11, 22;
+      --card: rgba(13, 19, 34, 0.72);
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-2: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.10);
+      --border-strong: rgba(255, 255, 255, 0.22);
+      --text: #e8ecf5;
+      --text-2: #b4bccd;
+      --muted: #7f8aa0;
+      --accent: #4fd1c5;       --accent-rgb: 79, 209, 197;
+      --accent-strong: #7ee8dd;
+      --on-accent: #06201d;
+      --amber: #f6b73c;        --amber-rgb: 246, 183, 60;
+      --link: #8ad8ff;
+      --plate: #ffffff;
+      --shadow: 0 30px 60px -24px rgba(0, 0, 0, 0.75);
+      /* canvas colors (r,g,b) and base alpha */
+      --pt: 125, 211, 252;
+      --pt-sel: 246, 183, 60;
+      --pt-line: 79, 209, 197;
+      --pt-alpha: 0.55;
+    }
+    :root[data-theme="light"] {
+      color-scheme: light;
+      --bg: #f5f7fb;           --bg-rgb: 245, 247, 251;
+      --card: rgba(255, 255, 255, 0.78);
+      --surface: rgba(15, 23, 42, 0.04);
+      --surface-2: rgba(15, 23, 42, 0.08);
+      --border: rgba(15, 23, 42, 0.10);
+      --border-strong: rgba(15, 23, 42, 0.25);
+      --text: #0f172a;
+      --text-2: #3b4a63;
+      --muted: #64748b;
+      --accent: #0f766e;       --accent-rgb: 15, 118, 110;
+      --accent-strong: #115e59;
+      --on-accent: #ffffff;
+      --amber: #b45309;        --amber-rgb: 180, 83, 9;
+      --link: #0369a1;
+      --plate: #ffffff;
+      --shadow: 0 30px 60px -28px rgba(15, 23, 42, 0.35);
+      --pt: 14, 116, 144;
+      --pt-sel: 180, 83, 9;
+      --pt-line: 15, 118, 110;
+      --pt-alpha: 0.38;
+    }
+
+    /* ---------- Base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: var(--font-sans); font-size: 16px; line-height: 1.6;
+      -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    #bg { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+    .page { position: relative; z-index: 1; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    img { max-width: 100%; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+    ::selection { background: rgba(var(--accent-rgb), 0.35); }
+
+    /* ---------- Nav ---------- */
+    .nav {
+      position: sticky; top: 0; z-index: 10;
+      background: rgba(var(--bg-rgb), 0.72);
+      -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-in { display: flex; align-items: center; gap: 18px; height: 64px; }
+    .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-family: var(--font-head); font-weight: 600; font-size: 16px; letter-spacing: -0.01em; }
+    .brand:hover { text-decoration: none; }
+    .brand svg { width: 28px; height: 28px; flex: none; }
+    .nav-links { display: flex; gap: 2px; margin-left: auto; }
+    .nav-links a { padding: 8px 12px; border-radius: 999px; color: var(--text-2); font-size: 14px; font-weight: 500; white-space: nowrap; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--surface-2); text-decoration: none; }
+    .nav-actions { display: flex; align-items: center; gap: 8px; }
+    .icon-btn {
+      width: 38px; height: 38px; border-radius: 999px; border: 1px solid var(--border);
+      background: var(--surface); color: var(--text-2); display: grid; place-items: center; cursor: pointer; padding: 0;
+      transition: border-color .2s, color .2s;
+    }
+    .icon-btn:hover { color: var(--text); border-color: var(--accent); }
+    .icon-btn svg { width: 18px; height: 18px; }
+    :root[data-theme="dark"] .ic-sun { display: none; }
+    :root[data-theme="light"] .ic-moon { display: none; }
+    @media (max-width: 860px) {
+      .nav-in { flex-wrap: wrap; height: auto; padding: 10px 0; row-gap: 6px; }
+      .nav-actions { margin-left: auto; }
+      .nav-links { order: 3; width: 100%; margin-left: 0; overflow-x: auto; scrollbar-width: none; }
+      .nav-links::-webkit-scrollbar { display: none; }
+    }
+
+    /* ---------- Buttons / chips ---------- */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 999px;
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+      font-weight: 500; font-size: 14px; line-height: 1; cursor: pointer;
+      transition: border-color .2s, background .2s, transform .2s;
+    }
+    .btn:hover { border-color: var(--accent); background: var(--surface-2); text-decoration: none; transform: translateY(-1px); }
+    .btn svg { width: 16px; height: 16px; flex: none; }
+    .btn.primary { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+    .btn.primary:hover { background: var(--accent-strong); }
+    .chip {
+      display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px; border-radius: 999px;
+      border: 1px solid var(--border); background: transparent; color: var(--text-2);
+      font: 500 13px/1.2 var(--font-sans); cursor: pointer; transition: color .2s, border-color .2s;
+    }
+    .chip:hover { color: var(--text); border-color: var(--accent); text-decoration: none; }
+    .chip svg { width: 14px; height: 14px; transition: transform .25s; }
+    .chip[aria-expanded="true"] { color: var(--accent); border-color: var(--accent); }
+    .chip[aria-expanded="true"] svg { transform: rotate(180deg); }
+    .tag { display: inline-flex; align-items: center; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border); background: var(--surface); color: var(--text-2); font-size: 13.5px; font-weight: 500; }
+
+    /* ---------- Hero ---------- */
+    .hero { padding: 76px 0 40px; overflow-x: clip; }
+    .hero-text { position: relative; }
+    .hero-text::before { content: ""; position: absolute; inset: -48px -72px; z-index: -1; pointer-events: none;
+      background: radial-gradient(ellipse at 42% 50%, rgba(var(--bg-rgb), .86) 28%, rgba(var(--bg-rgb), 0) 74%); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 0.8fr); gap: 48px; align-items: center; }
+    .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 16px; font-family: var(--font-mono); font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+    .eyebrow::before { content: ""; width: 28px; height: 1px; background: var(--accent); }
+    h1 { font-family: var(--font-head); font-weight: 700; font-size: clamp(2.6rem, 6vw, 4.3rem); line-height: 1.0; letter-spacing: -0.03em; margin: 0 0 16px; }
+    .tagline { font-family: var(--font-head); font-weight: 500; font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.3; color: var(--text-2); margin: 0 0 22px; max-width: 30ch; }
+    .tagline em { font-style: normal; color: var(--accent); }
+    .bio p { margin: 0 0 12px; color: var(--text-2); max-width: 64ch; }
+    .bio a { color: var(--text); border-bottom: 1px solid var(--border-strong); }
+    .bio a:hover { border-color: var(--accent); text-decoration: none; }
+    .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .hero-photo { position: relative; justify-self: end; width: min(300px, 100%); }
+    .hero-photo img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; display: block; border-radius: 28px; border: 1px solid var(--border-strong); box-shadow: var(--shadow); position: relative; z-index: 1; }
+    .hero-photo .orbit { position: absolute; inset: -14%; width: 128%; height: 128%; z-index: 0; color: var(--accent); opacity: .55; animation: spin 80s linear infinite; }
+    .hero-photo .orbit ellipse { fill: none; stroke: currentColor; stroke-width: .6; stroke-dasharray: 3 4; }
+    .hero-photo .orbit circle { fill: var(--amber); }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .hero-photo .orbit { animation: none; } }
+
+    /* Live coreset readout */
+    .hud {
+      margin-top: 24px; display: flex; align-items: center; flex-wrap: wrap; gap: 8px 12px;
+      padding: 10px 14px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface);
+      font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); max-width: 640px;
+    }
+    .hud-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--amber); animation: pulse 2.2s infinite; flex: none; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(var(--amber-rgb), .5); } 70% { box-shadow: 0 0 0 8px rgba(var(--amber-rgb), 0); } 100% { box-shadow: 0 0 0 0 rgba(var(--amber-rgb), 0); } }
+    .hud-phase { color: var(--text); min-width: 9ch; }
+    .hud-stats { color: var(--text-2); }
+    .hud-bar { width: 84px; height: 3px; border-radius: 3px; background: var(--border-strong); overflow: hidden; flex: none; }
+    .hud-bar i { display: block; height: 100%; width: 100%; background: var(--accent); transform-origin: left; transform: scaleX(0); }
+    .hud button { margin-left: auto; font: inherit; font-size: 12px; color: var(--muted); background: none; border: 1px solid var(--border); border-radius: 6px; padding: 3px 9px; cursor: pointer; }
+    .hud button:hover { color: var(--text); border-color: var(--accent); }
+    .hud-help { color: var(--muted); border-bottom: 1px dotted var(--muted); cursor: help; }
+
+    @media (max-width: 860px) {
+      .hero { padding: 44px 0 24px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+      .hero-photo { order: -1; justify-self: start; width: min(200px, 60%); }
+    }
+
+    /* ---------- Sections ---------- */
+    section { padding: 48px 0; }
+    .sec-head { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
+    .sec-index { font-family: var(--font-mono); font-size: 13px; color: var(--accent); letter-spacing: .08em; }
+    .sec-head h2 { font-family: var(--font-head); font-weight: 600; font-size: clamp(1.55rem, 3vw, 2rem); letter-spacing: -0.02em; margin: 0; line-height: 1.1; }
+    .sec-head::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+    .sec-sub { margin: -14px 0 24px; color: var(--muted); font-size: 15px; max-width: 70ch; }
+    .sec-sub a { color: var(--text-2); }
+
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; transition: border-color .2s, transform .2s; }
+    .card:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+
+    /* Research */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .card-icon { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: rgba(var(--accent-rgb), .13); color: var(--accent); margin-bottom: 14px; }
+    .card-icon svg { width: 22px; height: 22px; }
+    .card h3 { font-family: var(--font-head); font-weight: 600; font-size: 17px; margin: 0 0 8px; letter-spacing: -0.01em; }
+    .card p { margin: 0; color: var(--text-2); font-size: 14.5px; line-height: 1.55; }
+
+    /* Experience */
+    .grid-4 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+    .xp .logo { height: 84px; border-radius: 12px; background: var(--plate); border: 1px solid var(--border); display: grid; place-items: center; padding: 12px 16px; margin-bottom: 16px; }
+    .xp .logo img { max-height: 58px; max-width: 100%; width: auto; height: auto; object-fit: contain; display: block; }
+    .xp .org { font-family: var(--font-head); font-weight: 600; font-size: 16px; margin: 0 0 4px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .xp .role { margin: 0 0 8px; color: var(--text-2); font-size: 14.5px; line-height: 1.45; }
+    .xp .dates { font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); line-height: 1.6; }
+    .now { display: inline-block; padding: 1px 8px; border-radius: 999px; background: rgba(var(--accent-rgb), .15); color: var(--accent); font: 600 11px/1.6 var(--font-sans); letter-spacing: .05em; text-transform: uppercase; }
+
+    /* Publications */
+    .pubs { list-style: none; margin: 0; padding: 0; }
+    .year { display: flex; align-items: center; gap: 12px; margin: 26px 0 12px; font-family: var(--font-mono); font-size: 13px; letter-spacing: .12em; color: var(--muted); }
+    .year::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+    .pub { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 20px; padding: 18px; margin-bottom: 12px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); transition: border-color .2s; }
+    .pub:hover { border-color: var(--border-strong); }
+    .pub-thumb { width: 168px; height: 104px; border-radius: 10px; background: var(--plate); border: 1px solid var(--border); display: grid; place-items: center; padding: 6px; overflow: hidden; }
+    .pub-thumb img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+    .pub-venue { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 8px; padding: 3px 10px; border-radius: 999px; background: rgba(var(--accent-rgb), .12); color: var(--accent); font-family: var(--font-mono); font-size: 12px; }
+    .pub h3 { font-family: var(--font-head); font-weight: 600; font-size: 17.5px; line-height: 1.3; margin: 0 0 6px; letter-spacing: -0.01em; }
+    .pub-authors { margin: 0 0 12px; color: var(--text-2); font-size: 14.5px; }
+    .pub-authors b { color: var(--text); font-weight: 600; }
+    .pub-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+    .abs { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .35s ease; }
+    .abs > div { overflow: hidden; }
+    .abs.open { grid-template-rows: 1fr; }
+    .abs p { margin: 14px 0 0; padding-top: 14px; border-top: 1px dashed var(--border-strong); color: var(--text-2); font-size: 14.5px; line-height: 1.65; }
+    .note { margin: 14px 0 0; color: var(--muted); font-size: 13px; }
+    .subhead { font-family: var(--font-head); font-weight: 600; font-size: 1.25rem; margin: 40px 0 6px; letter-spacing: -0.01em; }
+    @media (max-width: 640px) {
+      .pub { grid-template-columns: 96px minmax(0, 1fr); gap: 14px; padding: 14px; }
+      .pub-thumb { width: 96px; height: 64px; padding: 4px; border-radius: 8px; }
+      .pub h3 { font-size: 16px; }
+    }
+    @media (max-width: 420px) {
+      .pub { grid-template-columns: 1fr; }
+      .pub-thumb { width: 100%; height: 96px; }
+    }
+
+    /* Teaching */
+    .tl { list-style: none; margin: 0; padding: 0 0 0 4px; border-left: 1px solid var(--border-strong); }
+    .tl li { position: relative; padding: 0 0 18px 24px; }
+    .tl li:last-child { padding-bottom: 0; }
+    .tl li::before { content: ""; position: absolute; left: -9px; top: 8px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 3px var(--bg); }
+    .tl .when { display: block; font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); margin-bottom: 2px; }
+    .tl .what { font-weight: 600; }
+    .tl .course { color: var(--text-2); }
+
+    /* Service */
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    /* Footer */
+    footer { padding: 36px 0 44px; border-top: 1px solid var(--border); color: var(--muted); font-size: 13.5px; }
+    .foot-in { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; align-items: center; }
+    footer a { color: var(--text-2); }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in, .no-js .reveal { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
+
+    @media (max-width: 900px) { .grid-3, .grid-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 520px) { .grid-3, .grid-4 { grid-template-columns: 1fr; } }
+
+    @media print {
+      #bg, .nav, .hud, .orbit, .hero-photo .orbit { display: none !important; }
+      body { background: #fff; color: #000; }
+      .abs { grid-template-rows: 1fr; }
+      .pub, .card { break-inside: avoid; }
+    }
+  </style>
 </head>
 
-<!-- =================== Bio =================== -->
 <body>
-  <table width="1000" border="0" align="center" border="0" cellspacing="0" cellpadding="20">
-    <tr><td>
-      <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-        <p align="center">
-          <pageheading style="font-size: 36px;">Morad Tukan</pageheading><br>
-          <font id="email" style="display:inline;">muradtuk_at_gmail_dot_com</font>
-        </p>
+  <canvas id="bg" aria-hidden="true"></canvas>
 
-        <tr>
-          <td width="32%" valign="top"><a href="images/Morad.jpeg"><img src="images/Morad.jpeg" width="100%" style="border-radius:15px"></a>
-            <p align=center>
-              <a href="files/CV.pdf">CV</a> |
-              <a href="https://scholar.google.com/citations?user=721xaz0AAAAJ&hl=en&oi=ao">Google Scholar</a> | 
-              <a href="https://www.linkedin.com/in/morad-tukan-b34693132/">LinkedIn</a>|<br/> 
-            </p>
-          </td>
-          <td width="68%" valign="top" align="justify">
-            <p></p>
-            <div style="font-size:12.5pt;" align="justify">
+  <div class="page">
+    <!-- ================= Nav ================= -->
+    <header class="nav">
+      <div class="wrap nav-in">
+        <a class="brand" href="#top" aria-label="Morad Tukan, home">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="#0d1322"/><circle cx="13" cy="17" r="5.2" fill="#f6b73c"/><circle cx="22" cy="10" r="2.3" fill="#4fd1c5"/><circle cx="24.5" cy="21" r="1.9" fill="#4fd1c5"/><circle cx="8" cy="8" r="1.7" fill="#4fd1c5"/><circle cx="19" cy="26" r="1.5" fill="#4fd1c5"/></svg>
+          Morad Tukan
+        </a>
+        <nav class="nav-links" aria-label="Sections">
+          <a href="#research">Research</a>
+          <a href="#experience">Experience</a>
+          <a href="#publications">Publications</a>
+          <a href="#teaching">Teaching</a>
+          <a href="#service">Service</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn" href="files/CV.pdf" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+            CV
+          </a>
+          <button class="icon-btn" id="theme-toggle" type="button" aria-label="Toggle light / dark theme" title="Toggle theme">
+            <svg class="ic-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg class="ic-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ================= Hero ================= -->
+      <section class="hero" id="about">
+        <div class="wrap hero-grid">
+          <div class="hero-text">
+            <p class="eyebrow">Applied AI Researcher · Camtek</p>
+            <h1>Morad Tukan</h1>
+            <p class="tagline">Shrinking data and models, <em>keeping the guarantees.</em></p>
+            <div class="bio">
               <p>
-                I am an applied AI researcher @ Camtek. My Ph.D. went under the supervision of Prof. Dan Feldman, at the Robotics & Big Data Labs, Computer Science Department at the University of Haifa, and under the supervision of Prof. Roee Diamant, at the Underwater Acoustic & Navigation Lab, School of Marine Sciences at the University of Haifa.
-
+                I am an applied AI researcher at Camtek. I completed my Ph.D. at the University of Haifa, advised by
+                Prof. Dan Feldman at the Robotics &amp; Big Data Lab (Department of Computer Science) and by
+                Prof. Roee Diamant at the Underwater Acoustic &amp; Navigation Lab (School of Marine Sciences).
               </p>
               <p>
-                My main research interests are machine learning, deep learning, big data, and robotics. My passion lies in handling real-world problems and providing practical solutions for boosting state-of-the-art solvers via approximation algorithms and computational geometry.
+                My research interests are machine learning, deep learning, big data, and robotics. I am passionate about
+                real-world problems and practical solutions that boost state-of-the-art solvers through approximation
+                algorithms and computational geometry.
               </p>
             </div>
-          </td>
-        </tr>
-      </table>
+            <div class="links">
+              <a class="btn primary" href="files/CV.pdf" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+                Curriculum Vitae
+              </a>
+              <a class="btn" href="https://scholar.google.com/citations?user=721xaz0AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                Google Scholar
+              </a>
+              <a class="btn" href="https://github.com/muradtuk" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.17c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                GitHub
+              </a>
+              <a class="btn" href="https://www.linkedin.com/in/morad-tukan-b34693132/" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+                LinkedIn
+              </a>
+              <a class="btn" id="email-link" href="#" rel="nofollow">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+                <span>Email</span>
+              </a>
+            </div>
 
-      <!-- =================== Experience =================== -->
-      <sectionheading>&nbsp;&nbsp;Experience</sectionheading>
-      <ul>
-      <table width="100%" align="center" style="margin-left:10px" cellspacing="0" cellpadding="0" border="0">
-        <tr>
-          <th width="16%" valign="top" align="center">
-            <img src="images/camtek.svg" alt="camtek" width="100%"></a>
-            <p style="line-height:1.3; font-size:12pt">Camtek<br>AI applied researcher<br>Aug'25 - Present</p>
-          </th>
-          <th width="16%" valign="top" align="center">
-            <img src="images/dh2.png" alt="dataheroes" width="50%"></a>
-            <p style="line-height:1.3; font-size:12pt">DataHeroes<br>Lead Researcher<br>May'22 - Aug'25</p>
-          </th>
-          <th width="16%" valign="top" align="center">
-            <img src="images/mit.png" alt="CSAIL MIT" width="100%"></a>
-            <p style="line-height:1.3; font-size:12pt">CSAIL MIT<br> Visiting Graduate Research Student <br> May'17 - Sep'17</p>
-          </th>
-          <th width="16%" valign="top" align="center">
-              <img src="images/hu.png" alt="University of Haifa" width="55%"></a>
-              <p style="line-height:1.3; font-size:12pt">Haifa University<br>M.Sc. + Ph.D. in CS<br>&nbsp; Oct'14 - May'17, &nbsp; Mar'18 - Sep'22 <br> Etgar Graduate</p>
-          </th>
-        </tr>
-      </table>
-      </ul>
+            <div class="hud" id="hud" title="The background is a live coreset: a small, sensitivity-sampled weighted subset that approximates the full point cloud.">
+              <span class="hud-dot" aria-hidden="true"></span>
+              <span class="hud-help">live coreset</span>
+              <span class="hud-phase" id="hud-phase">streaming</span>
+              <span class="hud-bar" aria-hidden="true"><i id="hud-bar"></i></span>
+              <span class="hud-stats" id="hud-stats">n = … → |S| = …</span>
+              <button type="button" id="hud-pause" aria-pressed="false">pause</button>
+            </div>
+          </div>
 
-
-
-<!-- =================== Teaching =================== -->
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
-  <tr><td><sectionheading style="font-size: 24px;">&nbsp;&nbsp;Teaching @ University of Haifa</sectionheading></td></tr>
-</table>
-<table width="100%" align="top" border="0" cellpadding="0">
-  <tr>
-    <span style="line-height:0.7">
-      <p style="text-align:left; padding-left:11px">
-        2021-2022: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Head TA, Processing of Marine Databases
-      </p>
-      <p style="text-align:left; padding-left:11px">
-         2016:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TA, Introduction to Computer Science
-      </p>
-      <p style="text-align:left; padding-left:11px">
-        2014:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Under-Graduate Teaching Assistant, Automata Theory
-      </p>
-    </span>
-  </tr>
-</table>
-
-
-
-<!-- =================== Preprints ===================
-
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="10">
-
-<tr><td><sectionheading>Preprints</sectionheading></td></tr>
-</table>
-<table width="100%" align="center" border="0" cellspacing="0" cellpadding="15">
-
-</table> -->
-
-<h2>Publications</h2>
-<ol class="pub-list", type="1">
-  <!-- Paper 1 -->
-  <li>
-    <strong>
-      Practical 0.385-Approximation for Submodular Maximization Subject to a Cardinality Constraint
-    </strong><br>
-    <b>Murad Tukan</b>, Loay Mualem, Moran Feldman
-    <div class="pub-links">
-      <a href="javascript:void(0)" onclick="toggleAbstract('abs1')">Abstract</a> |
-      <a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/5ba9ad2e7abefb68a7165396583038da-Paper-Conference.pdf" target="_blank">Paper</a> |
-      <a href="https://github.com/muradtuk/385ApproximationSubMax" target="_blank">Code</a> |
-      NeurIPS'24
-    </div>
-
-    <div id="abs1" class="abstract-container">
-      <div class="abstract-content">
-        <img src="images/practical.png" alt="Paper Image">
-        <p>
-          Non-monotone constrained submodular maximization plays a crucial role in various machine learning applications.
-          However, existing algorithms often struggle with a trade-off between approximation guarantees and practical efficiency.
-          The current state-of-the-art is a recent 0.401-approximation algorithm, but its computational complexity makes it
-          highly impractical. The best practical algorithms for the problem only guarantee 1/e-approximation. In this work, we
-          present a novel algorithm for submodular maximization subject to a cardinality constraint that combines a guarantee of
-          0.385-approximation with a low and practical query complexity of O(n+k²). Furthermore, we evaluate the empirical
-          performance of our algorithm in experiments based on various machine learning applications, including Movie
-          Recommendation, Image Summarization, and more.
-        </p>
-      </div>
-    </div>
-  </li>
-
-  <li>
-    <strong>
-      An Efficient Drifters Deployment Strategy to Evaluate Water Current Velocity Fields
-    </strong><br>
-    <b>Murad Tukan</b>, Eli Biton, Roee Diamant
-    <div class="pub-links">
-      <a href="javascript:void(0)" onclick="toggleAbstract('abs2')">Abstract</a> |
-      <a href="https://ieeexplore.ieee.org/document/10547293/" target="_blank">Paper</a> |
-      <a href="https://github.com/muradtuk/An-Efficient-Drifters-Deployment-Strategy-to-Evaluate-Water-Current-Velocity-Fields" target="_blank">Code</a> |
-      IEEE JOE'24
-    </div>
-
-    <div id="abs2" class="abstract-container">
-      <div class="abstract-content">
-        <img src="images/drifters.png" alt="Paper Image">
-        <p>
-          Water current prediction is essential for understanding ecosystems, and to shed light on the role 
-          of the ocean in the global climate context. Solutions vary from physical modeling, and long-term
-          observations, to short-term measurements. In this paper, we consider a common approach for water
-          current prediction that uses Lagrangian floaters for water current prediction by interpolating the trajectory
-          of the elements to reflect the velocity field. Here, an important aspect that has not been addressed before
-          is where to initially deploy the drifting elements such that the acquired velocity field would efficiently
-          represent the water current. To that end, we use a clustering approach that relies on a physical model of
-          the velocity field. Our method segments the modeled map and determines the deployment locations as
-          those that will lead the floaters to ’visit’ the center of the different segments. This way, we validate that
-          the area covered by the floaters will capture the in-homogeneously in the velocity field. Exploration over
-          a dataset of velocity field maps that span over a year demonstrates the applicability of our approach,
-          and shows a considerable improvement over the common approach of uniformly randomly choosing the
-          initial deployment sites. Finally, our implementation code can be found in [1].
-        </p>
-      </div>
-    </div>
-  </li> 
-  
-  <li>
-    <strong>
-      Bridging the Gap Between General and Down-Closed Convex Sets in Submodular Maximization
-    </strong><br>
-    Loay Mualem, <b>Murad Tukan</b>, Moran Feldman
-    <div class="pub-links">
-      <a href="javascript:void(0)" onclick="toggleAbstract('abs3')">Abstract</a> |
-      <a href="https://www.ijcai.org/proceedings/2024/0213.pdf" target="_blank">Paper</a> |
-      <a href="https://github.com/muradtuk/Bridging-the-Gap-between-General-and-Down-Closed-Convex-Sets-in-Submodular-Maximization" target="_blank">Code</a> |
-      IJCAI'24
-    </div>
-
-    <div id="abs3" class="abstract-container">
-      <div class="abstract-content">
-        <img src="images/bridging.png" alt="Paper Image">
-        <p>
-          Optimization of DR-submodular functions has experienced a notable surge in significance in recent times, marking a pivotal development within the domain of non-convex optimization.
-          Motivated by real-world scenarios, some recent works have delved into the maximization of non-monotone DR-submodular functions over general (not necessarily down-closed) convex set
-          constraints. Up to this point, these works have all used the minimum \ell_\infty norm of any feasible solution as a parameter. Unfortunately, a recent hardness result due to Mualem
-          \& Feldman~\cite{mualem2023resolving} shows that this approach cannot yield a smooth interpolation between down-closed and non-down-closed constraints. 
-          In this work, we suggest novel offline and online algorithms that provably provide such an interpolation based on a natural decomposition of the convex body constraint into two 
-          distinct convex bodies: a down-closed convex body and a general convex body. We also empirically demonstrate the superiority of our proposed algorithms across three offline and two 
-          online applications.
-        </p>
-      </div>
-    </div>
-  </li>
-
-  <li>
-    <strong>
-      On the Size and Approximation Error of Distilled Datasets
-    </strong><br>
-    Alaa Maalouf*, <b>Murad Tukan*</b>, Noel Loo, Ramin Hasani, Mathias Lechner, Daniela Rus
-    <div class="pub-links">
-      <a href="javascript:void(0)" onclick="toggleAbstract('abs4')">Abstract</a> |
-      <a href="https://proceedings.neurips.cc/paper_files/paper/2023/file/c03a9ccdb3e95f2c2dcfc3f4bc16bf42-Paper-Conference.pdf" target="_blank">Paper</a> |
-      NeurIPS'23
-    </div>
-
-    <div id="abs4" class="abstract-container">
-      <div class="abstract-content">
-        <img src="images/provable_distillation.png" alt="Paper Image">
-        <p>
-          Dataset Distillation is the task of synthesizing small datasets from large ones while still retaining comparable predictive accuracy to the original uncompressed dataset. Despite significant empirical progress in recent years, there is little understanding of the theoretical limitations/guarantees of dataset distillation, specifically, what excess risk is achieved by distillation compared to the original dataset, and how large are distilled datasets? In this work, we take a theoretical view on kernel ridge regression (KRR) based methods of dataset distillation such as Kernel Inducing Points. By transforming ridge regression in random Fourier features (RFF) space, we provide the first proof of the existence of small (size) distilled datasets and their corresponding excess risk for shift-invariant kernels. We prove that a small set of instances exists in the original input space such that its solution in the RFF space coincides with the solution of the original data. We further show that a KRR solution can be generated using this distilled set of instances which gives an approximation towards the KRR solution optimized on the full input data. The size of this set is linear in the dimension of the RFF space of the input set or alternatively near linear in the number of effective degrees of freedom, which is a function of the kernel, number of data points, and the regularization parameter $\lambda$. The error bound of this distilled set is also a function of . We verify our bounds analytically and empirically.
-        </p>
-      </div>
-    </div>
-  </li>
-
-  <li>
-    <strong>
-      Provable Data Subset Selection for Efficient Neural Networks Training
-    </strong><br>
-    <b>Murad Tukan</b>, Samson Zhou, Alaa Maalouf, Daniela Rus, Vladimir Braverman, Dan Feldman
-    <div class="pub-links">
-      <a href="javascript:void(0)" onclick="toggleAbstract('abs5')">Abstract</a> |
-      <a href="https://proceedings.mlr.press/v202/tukan23a.html" target="_blank">Paper</a> |
-      <a href="https://github.com/muradtuk/Provable-Data-Subset-Selection-For-Efficient-Neural-Network-Training" target="_blank">Code</a> |
-      ICML'23
-    </div>
-
-    <div id="abs5" class="abstract-container">
-      <div class="abstract-content">
-        <img src="images/rbfnn_coreset.png" alt="Paper Image">
-        <p>
-          Radial basis function neural networks (RBFNN) are well-known for their capability to approximate any continuous function on a closed bounded set with arbitrary precision given enough hidden neurons. In this paper, we introduce the first algorithm to construct coresets for RBFNNs, i.e., small weighted subsets that approximate the loss of the input data on any radial basis function network and thus approximate any function defined by an RBFNN on the larger input data. In particular, we construct coresets for radial basis and Laplacian loss functions. We then use our coresets to obtain a provable data subset selection algorithm for training deep neural networks. Since our coresets approximate every function, they also approximate the gradient of each weight in a neural network, which is a particular function on the input. We then perform empirical evaluations on function approximation and dataset subset selection on popular network architectures and data sets, demonstrating the efficacy and accuracy of our coreset construction.
-        </p>
-      </div>
-    </div>
-  </li>
-
-
-  <li>
-    <strong>
-      AutoCoreset: An Automatic Practical Coreset Construction Framework
-    </strong><br>
-    Alaa Maalouf*, <b>Murad Tukan*</b>, Vladimir Braverman, Daniela Rus
-    <div class="pub-links">
-      <a href="javascript:void(0)" onclick="toggleAbstract('abs6')">Abstract</a> |
-      <a href="https://proceedings.mlr.press/v202/maalouf23a.html" target="_blank">Paper</a> |
-      <a href="https://github.com/alaamaalouf/AutoCoreset" target="_blank">Code</a> |
-      ICML'23
-    </div>
-
-    <div id="abs6" class="abstract-container">
-      <div class="abstract-content">
-        <img src="images/autocoreset.png" alt="Paper Image">
-        <p>
-          A coreset is a small weighted subset of an input set that approximates its loss function, for a given set of queries. Coresets became prevalent in machine learning as they have shown to be advantageous for many applications. Unfortunately, coresets are constructed in a problem-dependent manner, where for each problem, a new coreset construction algorithm is suggested, taking years to prove its correctness. Even the generic frameworks require additional (problem-dependent) computations or proofs to be done by the user. Besides, many problems do not have (provable) small coresets, limiting their applicability. To this end, we suggest an automatic practical framework for constructing coresets, which requires (only) the input data and the desired cost function from the user, without the need for any other task-related computation to be done by the user. To do so, we reduce the problem of approximating a loss function to an instance of vector summation approximation, where the vectors we aim to sum are loss vectors of a specific subset of the queries, such that we aim to approximate the image of the function on this subset. We show that while this set is limited, the coreset is quite general. An extensive experimental study on various machine learning applications is also conducted. Finally, we provide a “plug and play" style implementation, proposing a user-friendly system that can be easily used to apply coresets for many problems. We believe that these contributions enable future research and easier use and applications of coresets.
-        </p>
-      </div>
-    </div>
-  </li>
-
-
-  <li>
-    <strong>
-      Pruning Neural Networks via Coresets and Convex Geometry: Towards No Assumptions
-    </strong><br>
-    <b>Murad Tukan*</b>, Loay Mualem*, Alaa Maalouf*
-    <div class="pub-links">
-      <a href="javascript:void(0)" onclick="toggleAbstract('abs7')">Abstract</a> |
-      <a href="https://proceedings.neurips.cc/paper_files/paper/2022/file/f7fc38fdd95fd146a471791b93ff9f12-Paper-Conference.pdf" target="_blank">Paper</a> |
-      NeurIPS'22
-    </div>
-
-    <div id="abs7" class="abstract-container">
-      <div class="abstract-content">
-        <img src="images/prune.png" alt="Paper Image">
-        <p>
-          Pruning is one of the predominant approaches for compressing deep neural networks (DNNs). Lately, coresets (provable data summarizations) were leveraged for pruning DNNs, adding the advantage of theoretical guarantees on the trade-off between the compression rate and the approximation error. However, coresets in this domain were either data dependant or generated under restrictive assumptions on both the model's weights and inputs. In real-world scenarios, such assumptions are rarely satisfied, limiting the applicability of coresets. To this end, we suggest a novel and robust framework for computing such coresets under mild assumptions on the model's weights and without any assumption on the training data. The idea is to compute the importance of each neuron in each layer with respect to the output of the following layer. This is achieved by an elegant combination of L\"{o}wner ellipsoid and Caratheodory theorem.Our method is simultaneously data-independent, applicable to various networks and datasets (due to the simplified assumptions), and theoretically supported. Experimental results show that our method outperforms existing coreset based neural pruning approaches across a wide range of networks and datasets. For example, our method achieved a 62% compression rate on ResNet50 on ImageNet with 1.09%  drop in accuracy.
-        </p>
-      </div>
-    </div>
-  </li>
-
-  <li>
-    <strong>
-      Obstacle Aware Sampling for Path Planning
-    </strong><br>
-    <b>Murad Tukan </b>, Alaa Maalouf, Dan Feldman, Roi Poranne
-    <div class="pub-links">
-      <a href="javascript:void(0)" onclick="toggleAbstract('abs8')">Abstract</a> |
-      <a href="https://ieeexplore.ieee.org/abstract/document/9981428" target="_blank">Paper</a> |
-      IROS'22
-    </div>
-
-    <div id="abs8" class="abstract-container">
-      <div class="abstract-content">
-        <img src="images/obstacleawareness.png" alt="Paper Image">
-        <p>
-          Many path planning algorithms are based on sampling the state space. While this approach is very simple, it can become costly when the obstacles are unknown, since samples hitting these obstacles are wasted. The goal of this paper is to efficiently identify obstacles in a map and remove them from the sampling space. To this end, we propose a pre-processing algorithm for space exploration that enables more efficient sampling. We show that it can boost the performance of other space sampling methods and path planners. Our approach is based on the fact that a convex obstacle can be approximated provably well by its minimum volume enclosing ellipsoid (MVEE), and a non-convex obstacle may be partitioned into convex shapes. Our main contribution is an al-gorithm that strategically finds a small sample, called the active-coreset, that adaptively samples the space via membership-oracle such that the MVEE of the coreset approximates the MVEE of the obstacle. Experimental results confirm the ef-fectiveness of our approach across multiple planners based on rapidly-exploring random trees, showing significant improve-ment in terms of time and path length.
-        </p>
-      </div>
-    </div>
-  </li>
-
-  <li>
-    <strong>
-      New Coresets for Projective Clustering and Applications
-    </strong><br>
-    <b>Murad Tukan</b>, Xuan Wu, Samson Zhou, Vladimir Braverman, Dan Feldman
-    <div class="pub-links">
-      <a href="javascript:void(0)" onclick="toggleAbstract('abs9')">Abstract</a> |
-      <a href="https://proceedings.mlr.press/v151/tukan22a.html" target="_blank">Paper</a> |
-      <a href="https://github.com/muradtuk/ProjectiveClusteringCoresets">Code</a> |
-      AISTATS'22
-    </div>
-
-    <div id="abs9" class="abstract-container">
-      <div class="abstract-content">
-        <img src="images/projective.png" alt="Paper Image">
-        <p>
-          (j,k)-projective clustering is the natural generalization of the family of k-clustering and j-subspace clustering problems. Given a set of points P in Rd, the goal is to find k
-           flats of dimension j, i.e., affine subspaces, that best fit P under a given distance measure. In this paper, we propose the first algorithm that returns an L∞ coreset of size polynomial in d.
-            Moreover, we give the first strong coreset construction for general M-estimator regression. Specifically, we show that our construction provides efficient coreset constructions for Cauchy, 
-            Welsch, Huber, Geman-McClure, Tukey, L1−L2, and Fair regression, as well as general concave and power-bounded loss functions. Finally, we provide experimental results based on real-world datasets,
-            showing the efficacy of our approach.
-        </p>
-      </div>
-    </div>
-  </li>
-
-  <li>
-    <strong>
-      Coresets for Data Discretization and Sine Wave Fitting
-    </strong><br>
-    Alaa Maalouf, <b>Murad Tukan</b>, Eric Price, Daniel M. Kane, Dan Feldman
-    <div class="pub-links">
-      <a href="javascript:void(0)" onclick="toggleAbstract('abs10')">Abstract</a> |
-      <a href="https://proceedings.mlr.press/v151/maalouf22a.html" target="_blank">Paper</a> |
-      <a href="https://github.com/alaamaalouf/coreset-for-sine-wave-fitting">Code</a> |
-      AISTATS'22
-    </div>
-
-    <div id="abs10" class="abstract-container">
-      <div class="abstract-content">
-        <img src="images/sinecoreset.png" alt="Paper Image">
-        <p>
-          (j,k)-projective clustering is the natural generalization of the family of k-clustering and j-subspace clustering problems. Given a set of points P in Rd, the goal is to find k
-           flats of dimension j, i.e., affine subspaces, that best fit P under a given distance measure. In this paper, we propose the first algorithm that returns an L∞ coreset of size polynomial in d.
-            Moreover, we give the first strong coreset construction for general M-estimator regression. Specifically, we show that our construction provides efficient coreset constructions for Cauchy, 
-            Welsch, Huber, Geman-McClure, Tukey, L1−L2, and Fair regression, as well as general concave and power-bounded loss functions. Finally, we provide experimental results based on real-world datasets,
-            showing the efficacy of our approach.
-        </p>
-      </div>
-    </div>
-  </li>
-
-  <li>
-    <strong>
-      On Coresets for Support Vector Machines
-    </strong><br>
-    <b>Murad Tukan</b>, Cenk Baykal, Dan Feldman, Daniela Rus
-    <div class="pub-links">
-      <a href="javascript:void(0)" onclick="toggleAbstract('abs11')">Abstract</a> |
-      <a href="https://www.sciencedirect.com/science/article/abs/pii/S0304397521005247" target="_blank">Paper</a> |
-      <a href="https://github.com/muradtuk/SVMCoreset">Code</a> |
-      Theoretical computer science'21
-    </div>
-
-    <div id="abs11" class="abstract-container">
-      <div class="abstract-content">
-        <img src="images/svmcoreset.png" alt="Paper Image">
-        <p>
-          We present an efficient coreset construction algorithm for large-scale Support Vector Machine (SVM) training in Big Data and streaming applications. A coreset is a small, representative subset of the original data points such that a model trained on the coreset is provably competitive with that trained on the original data set. Since the size of the coreset is generally much smaller than the original set, our preprocess-then-train scheme has potential to lead to significant speedups when training SVM models. We prove lower and upper bounds on the size of the coreset required to obtain small data summaries for the SVM problem. As a corollary, we show that our algorithm can be used to extend the applicability of any off-the-shelf SVM solver to streaming, distributed, and dynamic data settings. We evaluate the performance of our algorithm on real-world and synthetic data sets. Our experimental results reaffirm the favorable theoretical properties of our algorithm and demonstrate its practical effectiveness in accelerating SVM training.
-        </p>
-      </div>
-    </div>
-  </li>
-
-  <li>
-    <strong>
-      Sets Clustering
-    </strong><br>
-    Ibrahim Jubran*, <b>Murad Tukan*</b>, Alaa Maalouf*, Dan Feldman
-    <div class="pub-links">
-      <a href="javascript:void(0)" onclick="toggleAbstract('abs12')">Abstract</a> |
-      <a href="https://proceedings.mlr.press/v119/jubran20a.html" target="_blank">Paper</a> |
-      <a href="https://github.com/muradtuk/Sets-clustering">Code</a> |
-      ICML'20
-    </div>
-
-    <div id="abs12" class="abstract-container">
-      <div class="abstract-content">
-        <img src="images/setclustering.png" alt="Paper Image">
-        <p>
-          The input to the \emph{sets-k-means} problem is an integer k≥1 and a set P={P1,⋯,Pn} of fixed sized sets in Rd. The goal is to compute a set C of k
-          centers (points) in Rd that minimizes the sum ∑P∈Pminp∈P,c∈C∥p−c∥2 of squared distances to these sets. An \emph{ε-core-set} for this problem is a weighted subset of P
-          that approximates this sum up to 1±ε factor, for \emph{every} set C of k centers in Rd. We prove that such a core-set of O(log2n) sets always exists, 
-          and can be computed in O(nlogn) time, for every input P and every fixed d,k≥1 and ε∈(0,1). 
-          The result easily generalized for any metric space, distances to the power of z>0, and M-estimators that handle outliers. 
-          Applying an inefficient but optimal algorithm on this coreset allows us to obtain the first PTAS (1+ε approximation) for the sets-k-means problem that takes time near linear in n.
-          This is the first result even for sets-mean on the plane (k=1, d=2). Open source code and experimental results for document classification and facility locations are also provided.
-        </p>
-      </div>
-    </div>
-  </li>
-
-  <li>
-    <strong>
-      Coresets for Near-Convex Functions
-    </strong><br>
-    <b>Murad Tukan</b>, Alaa Maalouf, Dan Feldman
-    <div class="pub-links">
-      <a href="javascript:void(0)" onclick="toggleAbstract('abs13')">Abstract</a> |
-      <a href="https://proceedings.neurips.cc/paper/2020/hash/0afe095e81a6ac76ff3f69975cb3e7ae-Abstract.html" target="_blank">Paper</a> |
-      <a href="https://github.com/muradtuk/UnifiedFramework">Code</a> |
-      NeurIPS'20
-    </div>
-
-    <div id="abs13" class="abstract-container">
-      <div class="abstract-content">
-        <img src="images/unified.png" alt="Paper Image">
-        <p>
-          Coreset is usually a small weighted subset of n input points in Rd, that provably approximates their loss function for a given set of queries (models, classifiers, etc.).
-          Coresets become increasingly common in machine learning since existing heuristics or inefficient algorithms may be improved by running them possibly many times on the small coreset
-          that can be maintained for streaming distributed data. Coresets can be obtained by sensitivity (importance) sampling, where its size is proportional to the total sum of sensitivities. 
-          Unfortunately, computing the sensitivity of each point is problem dependent and may be harder to compute than the original optimization problem at hand. 
-          We suggest a generic framework for computing sensitivities (and thus coresets) for wide family of loss functions which we call near-convex functions. 
-          This is by suggesting the f-SVD factorization that generalizes the SVD factorization of matrices to functions. 
-          Example applications include coresets that are either new or significantly improves previous results, such as SVM, Logistic regression, M-estimators, and ℓz-regression. 
-          Experimental results and open source are also provided.
-        </p>
-      </div>
-    </div>
-  </li>
-  <!-- Add more papers by copying the <li> block above -->
-
-  </ol>
-
-  <h2>Preprints</h2>
-  <ol class="pub-list", type="1">
-    <li>
-      <strong>
-        Dataset Distillation Meets Provable Subset Selection
-      </strong><br>
-      <b>Murad Tukan*</b>, Alaa Maalouf*, Margarita Osadchy
-      <div class="pub-links">
-        <a href="javascript:void(0)" onclick="toggleAbstract('preprint1')">Abstract</a> |
-        <a href="https://arxiv.org/pdf/2307.08086" target="_blank">Paper</a>
-      </div>
-
-      <div id="preprint1" class="abstract-container">
-        <div class="abstract-content">
-          <img src="images/provable_init_distillation.png" alt="Paper Image">
-          <p>
-            Deep learning has grown tremendously over recent years, yielding state-of-the-art results in various fields. However, training such models requires huge amounts of data, increasing the computational time and cost. To address this, dataset distillation was proposed to compress a large training dataset into a smaller synthetic one that retains its performance -- this is usually done by (1) uniformly initializing a synthetic set and (2) iteratively updating/learning this set according to a predefined loss by uniformly sampling instances from the full data. In this paper, we improve both phases of dataset distillation: (1) we present a provable, sampling-based approach for initializing the distilled set by identifying important and removing redundant points in the data, and (2) we further merge the idea of data subset selection with dataset distillation, by training the distilled set on ``important'' sampled points during the training procedure instead of randomly sampling the next batch. To do so, we define the notion of importance based on the relative contribution of instances with respect to two different loss functions, i.e., one for the initialization phase (a kernel fitting function for kernel ridge regression and K-means based loss function for any other distillation method), and the relative cross-entropy loss (or any other predefined loss) function for the training phase. Finally, we provide experimental results showing how our method can latch on to existing dataset distillation techniques and improve their performance.
-          </p>
+          <div class="hero-photo">
+            <svg class="orbit" viewBox="0 0 100 100" aria-hidden="true">
+              <ellipse cx="50" cy="50" rx="47" ry="36" transform="rotate(-22 50 50)"/>
+              <circle cx="50" cy="6.4" r="1.6" transform="rotate(-22 50 50)"/>
+              <circle cx="50" cy="93.6" r="1.1" transform="rotate(-22 50 50)"/>
+            </svg>
+            <img src="images/Morad.jpeg" alt="Portrait of Morad Tukan" width="800" height="800" fetchpriority="high">
+          </div>
         </div>
-      </div>
-    </li>
-    <li>
-      <strong>
-        Orbslam3-Enhanced Autonomous Toy Drones: Pioneering Indoor Exploration
-      </strong><br>
-      <b>Murad Tukan</b>, Fares Fares, Yotam Grufinkle, Ido Talmor, Loay Mualem, Vladimir Braverman, Dan Feldman
-      <div class="pub-links">
-        <a href="javascript:void(0)" onclick="toggleAbstract('preprint2')">Abstract</a> |
-        <a href="https://arxiv.org/pdf/2312.13385" target="_blank">Paper</a>
-      </div>
+      </section>
 
-      <div id="preprint2" class="abstract-container">
-        <div class="abstract-content">
-          <img src="images/orbslam.png" alt="Paper Image">
-          <p>
-            Navigating toy drones through uncharted GPSdenied indoor spaces poses significant difficulties due to their
-            reliance on GPS for location determination. In such circumstances, the necessity for achieving proper navigation is a
-            primary concern. In response to this formidable challenge, we introduce a real-time autonomous indoor exploration system tailored for drones equipped with a monocular RGB camera. 
-            Our system utilizes ORB-SLAM3, a state-of-the-art vision feature-based SLAM, to handle both the localization of toy drones and the mapping of unmapped indoor terrains. 
-            Aside from the practicability of ORB-SLAM3, the generated maps are represented as sparse point clouds, making them prone to the presence of outlier data. 
-            To address this challenge, we propose an outlier removal algorithm with provable guarantees. Furthermore, our system incorporates a novel exit detection algorithm, 
-            ensuring continuous exploration by the toy drone throughout the unfamiliar indoor environment. We also transform the sparse point to ensure proper path planning using existing path planners.
-            To validate the efficacy and efficiency of our proposed system, we conducted offline and real-time experiments on the autonomous exploration of indoor spaces. 
-            The results from these endeavors demonstrate the effectiveness of our methods.
-          </p>
+      <!-- ================= Research ================= -->
+      <section id="research" class="reveal">
+        <div class="wrap">
+          <div class="sec-head"><span class="sec-index">01</span><h2>Research</h2></div>
+          <p class="sec-sub">A common thread: replace something big (data, models, search spaces) with something small that provably behaves the same.</p>
+          <div class="grid-3">
+            <article class="card">
+              <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="12" r="3.2" fill="currentColor" stroke="none"/><circle cx="4.5" cy="6" r="1.2"/><circle cx="18.5" cy="5.5" r="1.2"/><circle cx="20" cy="15" r="1.2"/><circle cx="6" cy="18.5" r="1.2"/><circle cx="14.5" cy="19.5" r="1.2"/><circle cx="16" cy="11" r="1.2"/></svg></div>
+              <h3>Coresets &amp; data summarization</h3>
+              <p>Small weighted subsets that approximate a loss for every query: sensitivity sampling, the f-SVD factorization for near-convex functions, and an automatic, problem-agnostic construction framework.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18l-7 8v6l-4 2v-8z"/></svg></div>
+              <h3>Dataset distillation &amp; subset selection</h3>
+              <p>Theory for distilled datasets (size and excess risk for kernel ridge regression), provable initialization of distilled sets, and subset selection for efficient neural network training.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5" cy="6" r="1.6"/><circle cx="5" cy="12" r="1.6"/><circle cx="5" cy="18" r="1.6"/><circle cx="19" cy="9" r="1.6"/><circle cx="19" cy="15" r="1.6"/><path d="M6.6 6.5 17.4 8.6M6.6 12l10.8-2.6M6.6 12l10.8 2.6M6.6 17.5l10.8-2.1"/><path d="M11 4.5l2.5 2.5M13.5 4.5 11 7" stroke-width="1.4"/></svg></div>
+              <h3>Neural network pruning</h3>
+              <p>Data-independent coresets for compressing deep networks via Löwner ellipsoids and Carathéodory's theorem, with 62% compression of ResNet50 on ImageNet at a 1.09% accuracy drop.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 20h18M3 20V4"/><path d="M4 18c3-9 8-12 16-13"/><circle cx="9.3" cy="11.1" r="1.3" fill="currentColor" stroke="none"/></svg></div>
+              <h3>Submodular optimization</h3>
+              <p>A practical 0.385-approximation for non-monotone submodular maximization under a cardinality constraint, and DR-submodular maximization over general (not necessarily down-closed) convex sets.</p>
+            </article>
+            <article class="card">
+              <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="12" rx="9" ry="5.5" transform="rotate(-25 12 12)"/><circle cx="8" cy="13.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="12.5" cy="10.5" r="1.1" fill="currentColor" stroke="none"/><circle cx="15.5" cy="12.5" r="1.1" fill="currentColor" stroke="none"/></svg></div>
+              <h3>Computational geometry</h3>
+              <p>Projective clustering and sets clustering coresets, minimum-volume enclosing ellipsoids, and strong coresets for M-estimator regression (Cauchy, Huber, Tukey and more).</p>
+            </article>
+            <article class="card">
+              <div class="card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><path d="M5.6 5.6 7.8 7.8M16.2 16.2l2.2 2.2M5.6 18.4l2.2-2.2M16.2 7.8l2.2-2.2"/></svg></div>
+              <h3>Robotics &amp; ocean sensing</h3>
+              <p>Obstacle-aware sampling for path planning, autonomous indoor exploration with toy drones and ORB-SLAM3, and drifter deployment strategies for estimating water current fields.</p>
+            </article>
+          </div>
         </div>
+      </section>
+
+      <!-- ================= Experience ================= -->
+      <section id="experience" class="reveal">
+        <div class="wrap">
+          <div class="sec-head"><span class="sec-index">02</span><h2>Experience</h2></div>
+          <div class="grid-4">
+            <article class="card xp">
+              <div class="logo"><img src="images/camtek.svg" alt="Camtek"></div>
+              <h3 class="org">Camtek <span class="now">Now</span></h3>
+              <p class="role">Applied AI Researcher</p>
+              <div class="dates">Aug 2025 – Present</div>
+            </article>
+            <article class="card xp">
+              <div class="logo"><img src="images/dh2.png" alt="DataHeroes"></div>
+              <h3 class="org">DataHeroes</h3>
+              <p class="role">Lead Researcher</p>
+              <div class="dates">May 2022 – Aug 2025</div>
+            </article>
+            <article class="card xp">
+              <div class="logo"><img src="images/mit.png" alt="MIT CSAIL"></div>
+              <h3 class="org">MIT CSAIL</h3>
+              <p class="role">Visiting Graduate Research Student</p>
+              <div class="dates">May 2017 – Sep 2017</div>
+            </article>
+            <article class="card xp">
+              <div class="logo"><img src="images/hu.png" alt="University of Haifa"></div>
+              <h3 class="org">University of Haifa</h3>
+              <p class="role">M.Sc. and Ph.D. in Computer Science<br>Etgar graduate</p>
+              <div class="dates">Oct 2014 – May 2017<br>Mar 2018 – Sep 2022</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= Publications ================= -->
+      <section id="publications" class="reveal">
+        <div class="wrap">
+          <div class="sec-head"><span class="sec-index">03</span><h2>Publications</h2></div>
+          <p class="sec-sub">Peer-reviewed papers, newest first. See <a href="https://scholar.google.com/citations?user=721xaz0AAAAJ&amp;hl=en&amp;oi=ao" target="_blank" rel="noopener">Google Scholar</a> for the full record. <span style="white-space:nowrap">* equal contribution</span></p>
+
+          <ol class="pubs">
+            <li class="year" aria-hidden="true">2024</li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/practical.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">NeurIPS 2024</span>
+                <h3>Practical 0.385-Approximation for Submodular Maximization Subject to a Cardinality Constraint</h3>
+                <p class="pub-authors"><b>Murad Tukan</b>, Loay Mualem, Moran Feldman</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="abs1">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://proceedings.neurips.cc/paper_files/paper/2024/file/5ba9ad2e7abefb68a7165396583038da-Paper-Conference.pdf" target="_blank" rel="noopener">Paper</a>
+                  <a class="chip" href="https://github.com/muradtuk/385ApproximationSubMax" target="_blank" rel="noopener">Code</a>
+                </div>
+                <div class="abs" id="abs1"><div><p>
+                  Non-monotone constrained submodular maximization plays a crucial role in various machine learning applications. However, existing algorithms often struggle with a trade-off between approximation guarantees and practical efficiency. The current state-of-the-art is a recent 0.401-approximation algorithm, but its computational complexity makes it highly impractical. The best practical algorithms for the problem only guarantee 1/e-approximation. In this work, we present a novel algorithm for submodular maximization subject to a cardinality constraint that combines a guarantee of 0.385-approximation with a low and practical query complexity of O(n+k²). Furthermore, we evaluate the empirical performance of our algorithm in experiments based on various machine learning applications, including Movie Recommendation, Image Summarization, and more.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/drifters.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">IEEE J. Oceanic Engineering 2024</span>
+                <h3>An Efficient Drifters Deployment Strategy to Evaluate Water Current Velocity Fields</h3>
+                <p class="pub-authors"><b>Murad Tukan</b>, Eli Biton, Roee Diamant</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="abs2">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://ieeexplore.ieee.org/document/10547293/" target="_blank" rel="noopener">Paper</a>
+                  <a class="chip" href="https://github.com/muradtuk/An-Efficient-Drifters-Deployment-Strategy-to-Evaluate-Water-Current-Velocity-Fields" target="_blank" rel="noopener">Code</a>
+                </div>
+                <div class="abs" id="abs2"><div><p>
+                  Water current prediction is essential for understanding ecosystems, and to shed light on the role of the ocean in the global climate context. Solutions vary from physical modeling, and long-term observations, to short-term measurements. In this paper, we consider a common approach for water current prediction that uses Lagrangian floaters for water current prediction by interpolating the trajectory of the elements to reflect the velocity field. Here, an important aspect that has not been addressed before is where to initially deploy the drifting elements such that the acquired velocity field would efficiently represent the water current. To that end, we use a clustering approach that relies on a physical model of the velocity field. Our method segments the modeled map and determines the deployment locations as those that will lead the floaters to “visit” the center of the different segments. This way, we validate that the area covered by the floaters will capture the in-homogeneously in the velocity field. Exploration over a dataset of velocity field maps that span over a year demonstrates the applicability of our approach, and shows a considerable improvement over the common approach of uniformly randomly choosing the initial deployment sites. Our implementation code is publicly available.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/bridging.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">IJCAI 2024</span>
+                <h3>Bridging the Gap Between General and Down-Closed Convex Sets in Submodular Maximization</h3>
+                <p class="pub-authors">Loay Mualem, <b>Murad Tukan</b>, Moran Feldman</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="abs3">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://www.ijcai.org/proceedings/2024/0213.pdf" target="_blank" rel="noopener">Paper</a>
+                  <a class="chip" href="https://github.com/muradtuk/Bridging-the-Gap-between-General-and-Down-Closed-Convex-Sets-in-Submodular-Maximization" target="_blank" rel="noopener">Code</a>
+                </div>
+                <div class="abs" id="abs3"><div><p>
+                  Optimization of DR-submodular functions has experienced a notable surge in significance in recent times, marking a pivotal development within the domain of non-convex optimization. Motivated by real-world scenarios, some recent works have delved into the maximization of non-monotone DR-submodular functions over general (not necessarily down-closed) convex set constraints. Up to this point, these works have all used the minimum ℓ<sub>∞</sub> norm of any feasible solution as a parameter. Unfortunately, a recent hardness result due to Mualem &amp; Feldman (2023) shows that this approach cannot yield a smooth interpolation between down-closed and non-down-closed constraints. In this work, we suggest novel offline and online algorithms that provably provide such an interpolation based on a natural decomposition of the convex body constraint into two distinct convex bodies: a down-closed convex body and a general convex body. We also empirically demonstrate the superiority of our proposed algorithms across three offline and two online applications.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="year" aria-hidden="true">2023</li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/provable_distillation.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">NeurIPS 2023</span>
+                <h3>On the Size and Approximation Error of Distilled Datasets</h3>
+                <p class="pub-authors">Alaa Maalouf*, <b>Murad Tukan*</b>, Noel Loo, Ramin Hasani, Mathias Lechner, Daniela Rus</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="abs4">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://proceedings.neurips.cc/paper_files/paper/2023/file/c03a9ccdb3e95f2c2dcfc3f4bc16bf42-Paper-Conference.pdf" target="_blank" rel="noopener">Paper</a>
+                </div>
+                <div class="abs" id="abs4"><div><p>
+                  Dataset Distillation is the task of synthesizing small datasets from large ones while still retaining comparable predictive accuracy to the original uncompressed dataset. Despite significant empirical progress in recent years, there is little understanding of the theoretical limitations/guarantees of dataset distillation, specifically, what excess risk is achieved by distillation compared to the original dataset, and how large are distilled datasets? In this work, we take a theoretical view on kernel ridge regression (KRR) based methods of dataset distillation such as Kernel Inducing Points. By transforming ridge regression in random Fourier features (RFF) space, we provide the first proof of the existence of small (size) distilled datasets and their corresponding excess risk for shift-invariant kernels. We prove that a small set of instances exists in the original input space such that its solution in the RFF space coincides with the solution of the original data. We further show that a KRR solution can be generated using this distilled set of instances which gives an approximation towards the KRR solution optimized on the full input data. The size of this set is linear in the dimension of the RFF space of the input set or alternatively near linear in the number of effective degrees of freedom, which is a function of the kernel, number of data points, and the regularization parameter λ. The error bound of this distilled set is also a function of λ. We verify our bounds analytically and empirically.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/rbfnn_coreset.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">ICML 2023</span>
+                <h3>Provable Data Subset Selection for Efficient Neural Networks Training</h3>
+                <p class="pub-authors"><b>Murad Tukan</b>, Samson Zhou, Alaa Maalouf, Daniela Rus, Vladimir Braverman, Dan Feldman</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="abs5">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://proceedings.mlr.press/v202/tukan23a.html" target="_blank" rel="noopener">Paper</a>
+                  <a class="chip" href="https://github.com/muradtuk/Provable-Data-Subset-Selection-For-Efficient-Neural-Network-Training" target="_blank" rel="noopener">Code</a>
+                </div>
+                <div class="abs" id="abs5"><div><p>
+                  Radial basis function neural networks (RBFNN) are well-known for their capability to approximate any continuous function on a closed bounded set with arbitrary precision given enough hidden neurons. In this paper, we introduce the first algorithm to construct coresets for RBFNNs, i.e., small weighted subsets that approximate the loss of the input data on any radial basis function network and thus approximate any function defined by an RBFNN on the larger input data. In particular, we construct coresets for radial basis and Laplacian loss functions. We then use our coresets to obtain a provable data subset selection algorithm for training deep neural networks. Since our coresets approximate every function, they also approximate the gradient of each weight in a neural network, which is a particular function on the input. We then perform empirical evaluations on function approximation and dataset subset selection on popular network architectures and data sets, demonstrating the efficacy and accuracy of our coreset construction.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/autocoreset.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">ICML 2023</span>
+                <h3>AutoCoreset: An Automatic Practical Coreset Construction Framework</h3>
+                <p class="pub-authors">Alaa Maalouf*, <b>Murad Tukan*</b>, Vladimir Braverman, Daniela Rus</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="abs6">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://proceedings.mlr.press/v202/maalouf23a.html" target="_blank" rel="noopener">Paper</a>
+                  <a class="chip" href="https://github.com/alaamaalouf/AutoCoreset" target="_blank" rel="noopener">Code</a>
+                </div>
+                <div class="abs" id="abs6"><div><p>
+                  A coreset is a small weighted subset of an input set that approximates its loss function, for a given set of queries. Coresets became prevalent in machine learning as they have shown to be advantageous for many applications. Unfortunately, coresets are constructed in a problem-dependent manner, where for each problem, a new coreset construction algorithm is suggested, taking years to prove its correctness. Even the generic frameworks require additional (problem-dependent) computations or proofs to be done by the user. Besides, many problems do not have (provable) small coresets, limiting their applicability. To this end, we suggest an automatic practical framework for constructing coresets, which requires (only) the input data and the desired cost function from the user, without the need for any other task-related computation to be done by the user. To do so, we reduce the problem of approximating a loss function to an instance of vector summation approximation, where the vectors we aim to sum are loss vectors of a specific subset of the queries, such that we aim to approximate the image of the function on this subset. We show that while this set is limited, the coreset is quite general. An extensive experimental study on various machine learning applications is also conducted. Finally, we provide a “plug and play” style implementation, proposing a user-friendly system that can be easily used to apply coresets for many problems. We believe that these contributions enable future research and easier use and applications of coresets.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="year" aria-hidden="true">2022</li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/prune.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">NeurIPS 2022</span>
+                <h3>Pruning Neural Networks via Coresets and Convex Geometry: Towards No Assumptions</h3>
+                <p class="pub-authors"><b>Murad Tukan*</b>, Loay Mualem*, Alaa Maalouf*</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="abs7">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://proceedings.neurips.cc/paper_files/paper/2022/file/f7fc38fdd95fd146a471791b93ff9f12-Paper-Conference.pdf" target="_blank" rel="noopener">Paper</a>
+                </div>
+                <div class="abs" id="abs7"><div><p>
+                  Pruning is one of the predominant approaches for compressing deep neural networks (DNNs). Lately, coresets (provable data summarizations) were leveraged for pruning DNNs, adding the advantage of theoretical guarantees on the trade-off between the compression rate and the approximation error. However, coresets in this domain were either data dependant or generated under restrictive assumptions on both the model's weights and inputs. In real-world scenarios, such assumptions are rarely satisfied, limiting the applicability of coresets. To this end, we suggest a novel and robust framework for computing such coresets under mild assumptions on the model's weights and without any assumption on the training data. The idea is to compute the importance of each neuron in each layer with respect to the output of the following layer. This is achieved by an elegant combination of Löwner ellipsoid and Carathéodory theorem. Our method is simultaneously data-independent, applicable to various networks and datasets (due to the simplified assumptions), and theoretically supported. Experimental results show that our method outperforms existing coreset based neural pruning approaches across a wide range of networks and datasets. For example, our method achieved a 62% compression rate on ResNet50 on ImageNet with 1.09% drop in accuracy.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/obstacleawareness.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">IROS 2022</span>
+                <h3>Obstacle Aware Sampling for Path Planning</h3>
+                <p class="pub-authors"><b>Murad Tukan</b>, Alaa Maalouf, Dan Feldman, Roi Poranne</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="abs8">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://ieeexplore.ieee.org/abstract/document/9981428" target="_blank" rel="noopener">Paper</a>
+                </div>
+                <div class="abs" id="abs8"><div><p>
+                  Many path planning algorithms are based on sampling the state space. While this approach is very simple, it can become costly when the obstacles are unknown, since samples hitting these obstacles are wasted. The goal of this paper is to efficiently identify obstacles in a map and remove them from the sampling space. To this end, we propose a pre-processing algorithm for space exploration that enables more efficient sampling. We show that it can boost the performance of other space sampling methods and path planners. Our approach is based on the fact that a convex obstacle can be approximated provably well by its minimum volume enclosing ellipsoid (MVEE), and a non-convex obstacle may be partitioned into convex shapes. Our main contribution is an algorithm that strategically finds a small sample, called the active-coreset, that adaptively samples the space via membership-oracle such that the MVEE of the coreset approximates the MVEE of the obstacle. Experimental results confirm the effectiveness of our approach across multiple planners based on rapidly-exploring random trees, showing significant improvement in terms of time and path length.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/projective.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">AISTATS 2022</span>
+                <h3>New Coresets for Projective Clustering and Applications</h3>
+                <p class="pub-authors"><b>Murad Tukan</b>, Xuan Wu, Samson Zhou, Vladimir Braverman, Dan Feldman</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="abs9">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://proceedings.mlr.press/v151/tukan22a.html" target="_blank" rel="noopener">Paper</a>
+                  <a class="chip" href="https://github.com/muradtuk/ProjectiveClusteringCoresets" target="_blank" rel="noopener">Code</a>
+                </div>
+                <div class="abs" id="abs9"><div><p>
+                  (j,k)-projective clustering is the natural generalization of the family of k-clustering and j-subspace clustering problems. Given a set of points P in ℝ<sup>d</sup>, the goal is to find k flats of dimension j, i.e., affine subspaces, that best fit P under a given distance measure. In this paper, we propose the first algorithm that returns an L<sub>∞</sub> coreset of size polynomial in d. Moreover, we give the first strong coreset construction for general M-estimator regression. Specifically, we show that our construction provides efficient coreset constructions for Cauchy, Welsch, Huber, Geman-McClure, Tukey, L<sub>1</sub>−L<sub>2</sub>, and Fair regression, as well as general concave and power-bounded loss functions. Finally, we provide experimental results based on real-world datasets, showing the efficacy of our approach.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/sinecoreset.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">AISTATS 2022</span>
+                <h3>Coresets for Data Discretization and Sine Wave Fitting</h3>
+                <p class="pub-authors">Alaa Maalouf, <b>Murad Tukan</b>, Eric Price, Daniel M. Kane, Dan Feldman</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="abs10">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://proceedings.mlr.press/v151/maalouf22a.html" target="_blank" rel="noopener">Paper</a>
+                  <a class="chip" href="https://github.com/alaamaalouf/coreset-for-sine-wave-fitting" target="_blank" rel="noopener">Code</a>
+                </div>
+                <div class="abs" id="abs10"><div><p>
+                  In the <em>monitoring</em> problem, the input is an unbounded stream P = p<sub>1</sub>, p<sub>2</sub>, … of integers in [N] := {1, …, N}, that are obtained from a sensor (such as GPS or heart beats of a human). The goal (e.g., for anomaly detection) is to approximate the n points received so far in P by a single frequency sin, e.g. min<sub>c∈C</sub> cost(P, c) + λ(c), where cost(P, c) = Σ<sub>i=1..n</sub> sin²(2π/N · p<sub>i</sub>c), C ⊆ [N] is a feasible set of solutions, and λ is a given regularization function. For any approximation error ε &gt; 0, we prove that every set P of n integers has a weighted subset S ⊆ P (sometimes called core-set) of cardinality |S| ∈ O(log(N)<sup>O(1)</sup>) that approximates cost(P, c) (for every c ∈ [N]) up to a multiplicative factor of 1 ± ε. Using known coreset techniques, this implies streaming algorithms using only O((log(N) log(n))<sup>O(1)</sup>) memory. Our results hold for a large family of functions. Experimental results and open source code are provided.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="year" aria-hidden="true">2021</li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/svmcoreset.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">Theoretical Computer Science 2021</span>
+                <h3>On Coresets for Support Vector Machines</h3>
+                <p class="pub-authors"><b>Murad Tukan</b>, Cenk Baykal, Dan Feldman, Daniela Rus</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="abs11">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://www.sciencedirect.com/science/article/abs/pii/S0304397521005247" target="_blank" rel="noopener">Paper</a>
+                  <a class="chip" href="https://github.com/muradtuk/SVMCoreset" target="_blank" rel="noopener">Code</a>
+                </div>
+                <div class="abs" id="abs11"><div><p>
+                  We present an efficient coreset construction algorithm for large-scale Support Vector Machine (SVM) training in Big Data and streaming applications. A coreset is a small, representative subset of the original data points such that a model trained on the coreset is provably competitive with that trained on the original data set. Since the size of the coreset is generally much smaller than the original set, our preprocess-then-train scheme has potential to lead to significant speedups when training SVM models. We prove lower and upper bounds on the size of the coreset required to obtain small data summaries for the SVM problem. As a corollary, we show that our algorithm can be used to extend the applicability of any off-the-shelf SVM solver to streaming, distributed, and dynamic data settings. We evaluate the performance of our algorithm on real-world and synthetic data sets. Our experimental results reaffirm the favorable theoretical properties of our algorithm and demonstrate its practical effectiveness in accelerating SVM training.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="year" aria-hidden="true">2020</li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/setclustering.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">ICML 2020</span>
+                <h3>Sets Clustering</h3>
+                <p class="pub-authors">Ibrahim Jubran*, <b>Murad Tukan*</b>, Alaa Maalouf*, Dan Feldman</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="abs12">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://proceedings.mlr.press/v119/jubran20a.html" target="_blank" rel="noopener">Paper</a>
+                  <a class="chip" href="https://github.com/muradtuk/Sets-clustering" target="_blank" rel="noopener">Code</a>
+                </div>
+                <div class="abs" id="abs12"><div><p>
+                  The input to the <em>sets-k-means</em> problem is an integer k ≥ 1 and a set 𝒫 = {P<sub>1</sub>, …, P<sub>n</sub>} of fixed sized sets in ℝ<sup>d</sup>. The goal is to compute a set C of k centers (points) in ℝ<sup>d</sup> that minimizes the sum Σ<sub>P∈𝒫</sub> min<sub>p∈P, c∈C</sub> ‖p − c‖² of squared distances to these sets. An <em>ε-core-set</em> for this problem is a weighted subset of 𝒫 that approximates this sum up to 1 ± ε factor, for <em>every</em> set C of k centers in ℝ<sup>d</sup>. We prove that such a core-set of O(log² n) sets always exists, and can be computed in O(n log n) time, for every input 𝒫 and every fixed d, k ≥ 1 and ε ∈ (0, 1). The result easily generalized for any metric space, distances to the power of z &gt; 0, and M-estimators that handle outliers. Applying an inefficient but optimal algorithm on this coreset allows us to obtain the first PTAS (1 + ε approximation) for the sets-k-means problem that takes time near linear in n. This is the first result even for sets-mean on the plane (k = 1, d = 2). Open source code and experimental results for document classification and facility locations are also provided.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/unified.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">NeurIPS 2020</span>
+                <h3>Coresets for Near-Convex Functions</h3>
+                <p class="pub-authors"><b>Murad Tukan</b>, Alaa Maalouf, Dan Feldman</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="abs13">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://proceedings.neurips.cc/paper/2020/hash/0afe095e81a6ac76ff3f69975cb3e7ae-Abstract.html" target="_blank" rel="noopener">Paper</a>
+                  <a class="chip" href="https://github.com/muradtuk/UnifiedFramework" target="_blank" rel="noopener">Code</a>
+                </div>
+                <div class="abs" id="abs13"><div><p>
+                  Coreset is usually a small weighted subset of n input points in ℝ<sup>d</sup>, that provably approximates their loss function for a given set of queries (models, classifiers, etc.). Coresets become increasingly common in machine learning since existing heuristics or inefficient algorithms may be improved by running them possibly many times on the small coreset that can be maintained for streaming distributed data. Coresets can be obtained by sensitivity (importance) sampling, where its size is proportional to the total sum of sensitivities. Unfortunately, computing the sensitivity of each point is problem dependent and may be harder to compute than the original optimization problem at hand. We suggest a generic framework for computing sensitivities (and thus coresets) for wide family of loss functions which we call near-convex functions. This is by suggesting the f-SVD factorization that generalizes the SVD factorization of matrices to functions. Example applications include coresets that are either new or significantly improves previous results, such as SVM, Logistic regression, M-estimators, and ℓ<sub>z</sub>-regression. Experimental results and open source are also provided.
+                </p></div></div>
+              </div>
+            </li>
+          </ol>
+
+          <h3 class="subhead" id="preprints">Preprints</h3>
+          <ol class="pubs">
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/spuraudio.jpg" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">arXiv 2026</span>
+                <h3>SpurAudio: A Benchmark for Studying Shortcut Learning in Few-Shot Audio Classification</h3>
+                <p class="pub-authors">Giries Abu Ayoub, <b>Murad Tukan</b>, Loay Mualem</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="pre-spuraudio">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://arxiv.org/abs/2605.13672" target="_blank" rel="noopener">Paper</a>
+                  <a class="chip" href="https://github.com/Jerryaa98/SpurAudio" target="_blank" rel="noopener">Code</a>
+                </div>
+                <div class="abs" id="pre-spuraudio"><div><p>
+                  Few-shot classification (FSC) is widely used for learning from limited labeled data, yet most evaluations implicitly assume that target concepts are independent of contextual cues. In real-world settings, however, examples often appear within rich contexts, allowing models to exploit spurious correlations between foreground content and background signals. While such effects have been studied in few-shot image classification, their role in few-shot audio classification remains largely unexplored, and existing audio benchmarks offer limited control over contextual structure. We introduce SpurAudio, a benchmark that leverages the natural separability of foreground events and background environments in audio to enable controlled, multi-level evaluation of contextual shifts across support and query sets. Using this benchmark, we show that many state-of-the-art few-shot methods suffer severe performance degradation when background correlations are disrupted, despite achieving similar accuracy under standard evaluation protocols. Crucially, this vulnerability persists even in large pretrained audio foundation models, ruling out limited backbone capacity as an explanation. Moreover, methods that appear comparable under conventional benchmarks can exhibit markedly different sensitivity to spurious correlations, revealing systematic algorithmic strengths and vulnerabilities tied to how feature representations interact with classifier heads at inference time. These findings provide new insight into the behavior of few-shot methods in audio and highlight the need for benchmarks that explicitly probe context dependence when evaluating FSC models.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/provable_init_distillation.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">arXiv 2023</span>
+                <h3>Dataset Distillation Meets Provable Subset Selection</h3>
+                <p class="pub-authors"><b>Murad Tukan*</b>, Alaa Maalouf*, Margarita Osadchy</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="pre1">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://arxiv.org/pdf/2307.08086" target="_blank" rel="noopener">Paper</a>
+                </div>
+                <div class="abs" id="pre1"><div><p>
+                  Deep learning has grown tremendously over recent years, yielding state-of-the-art results in various fields. However, training such models requires huge amounts of data, increasing the computational time and cost. To address this, dataset distillation was proposed to compress a large training dataset into a smaller synthetic one that retains its performance. This is usually done by (1) uniformly initializing a synthetic set and (2) iteratively updating/learning this set according to a predefined loss by uniformly sampling instances from the full data. In this paper, we improve both phases of dataset distillation: (1) we present a provable, sampling-based approach for initializing the distilled set by identifying important and removing redundant points in the data, and (2) we further merge the idea of data subset selection with dataset distillation, by training the distilled set on “important” sampled points during the training procedure instead of randomly sampling the next batch. To do so, we define the notion of importance based on the relative contribution of instances with respect to two different loss functions, i.e., one for the initialization phase (a kernel fitting function for kernel ridge regression and K-means based loss function for any other distillation method), and the relative cross-entropy loss (or any other predefined loss) function for the training phase. Finally, we provide experimental results showing how our method can latch on to existing dataset distillation techniques and improve their performance.
+                </p></div></div>
+              </div>
+            </li>
+
+            <li class="pub">
+              <div class="pub-thumb"><img src="images/orbslam.png" alt="" loading="lazy"></div>
+              <div>
+                <span class="pub-venue">arXiv 2023</span>
+                <h3>ORB-SLAM3-Enhanced Autonomous Toy Drones: Pioneering Indoor Exploration</h3>
+                <p class="pub-authors"><b>Murad Tukan</b>, Fares Fares, Yotam Grufinkle, Ido Talmor, Loay Mualem, Vladimir Braverman, Dan Feldman</p>
+                <div class="pub-actions">
+                  <button class="chip" type="button" aria-expanded="false" aria-controls="pre2">Abstract <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+                  <a class="chip" href="https://arxiv.org/pdf/2312.13385" target="_blank" rel="noopener">Paper</a>
+                </div>
+                <div class="abs" id="pre2"><div><p>
+                  Navigating toy drones through uncharted GPS-denied indoor spaces poses significant difficulties due to their reliance on GPS for location determination. In such circumstances, the necessity for achieving proper navigation is a primary concern. In response to this formidable challenge, we introduce a real-time autonomous indoor exploration system tailored for drones equipped with a monocular RGB camera. Our system utilizes ORB-SLAM3, a state-of-the-art vision feature-based SLAM, to handle both the localization of toy drones and the mapping of unmapped indoor terrains. Aside from the practicability of ORB-SLAM3, the generated maps are represented as sparse point clouds, making them prone to the presence of outlier data. To address this challenge, we propose an outlier removal algorithm with provable guarantees. Furthermore, our system incorporates a novel exit detection algorithm, ensuring continuous exploration by the toy drone throughout the unfamiliar indoor environment. We also transform the sparse point to ensure proper path planning using existing path planners. To validate the efficacy and efficiency of our proposed system, we conducted offline and real-time experiments on the autonomous exploration of indoor spaces. The results from these endeavors demonstrate the effectiveness of our methods.
+                </p></div></div>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ================= Teaching ================= -->
+      <section id="teaching" class="reveal">
+        <div class="wrap">
+          <div class="sec-head"><span class="sec-index">04</span><h2>Teaching</h2></div>
+          <p class="sec-sub">University of Haifa, Department of Computer Science.</p>
+          <ul class="tl">
+            <li><span class="when">2021 – 2022</span><span class="what">Head Teaching Assistant</span> <span class="course">· Processing of Marine Databases</span></li>
+            <li><span class="when">2016</span><span class="what">Teaching Assistant</span> <span class="course">· Introduction to Computer Science</span></li>
+            <li><span class="when">2014</span><span class="what">Undergraduate Teaching Assistant</span> <span class="course">· Automata Theory</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ================= Service ================= -->
+      <section id="service" class="reveal">
+        <div class="wrap">
+          <div class="sec-head"><span class="sec-index">05</span><h2>Service</h2></div>
+          <p class="sec-sub">Reviewer for</p>
+          <div class="tags">
+            <span class="tag">TPAMI</span>
+            <span class="tag">NeurIPS</span>
+            <span class="tag">ICLR</span>
+            <span class="tag">ICML</span>
+            <span class="tag">TMLR</span>
+            <span class="tag">IEEE JOE</span>
+            <span class="tag">AISTATS</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap foot-in">
+        <span>© <span id="year">2026</span> Morad Tukan</span>
+        <span>The background is a live coreset: sensitivity sampling of a synthetic point cloud, recomputed every cycle.</span>
       </div>
-    </li>
-  </ol>
+    </footer>
+  </div>
 
-  <h2>Service</h2>
-  <ul class="pub-list"> 
-    <li>
-      Reviewer: TPAMI, NeurIPS, ICLR, ICML, TMLR, IEEE JOE, and AISTATS.
-    </li>
-  </ul>
+  <script>
+  (function () {
+    'use strict';
 
-<script>
-  function toggleAbstract(id) {
-    const el = document.getElementById(id);
-    if (el.style.display === "block") {
-      slideUp(el);
+    /* ---------- Theme toggle ---------- */
+    var root = document.documentElement;
+    var toggle = document.getElementById('theme-toggle');
+    toggle.addEventListener('click', function () {
+      var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+      document.querySelector('meta[name="theme-color"]').setAttribute('content', next === 'dark' ? '#070b16' : '#f5f7fb');
+      if (window.__bgTheme) window.__bgTheme();
+    });
+
+    /* ---------- Email (assembled at runtime to deter scrapers) ---------- */
+    var em = document.getElementById('email-link');
+    var user = 'muradtuk', host = ['gmail', 'com'].join('.');
+    em.href = 'mailto:' + user + '@' + host;
+    em.querySelector('span').textContent = user + '@' + host;
+
+    /* ---------- Abstract toggles ---------- */
+    document.querySelectorAll('.chip[aria-controls]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var panel = document.getElementById(btn.getAttribute('aria-controls'));
+        var open = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!open));
+        panel.classList.toggle('open', !open);
+      });
+    });
+
+    /* ---------- Active nav link ---------- */
+    var navLinks = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
+    var sections = navLinks.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+    if ('IntersectionObserver' in window) {
+      var current = null;
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) current = e.target.id; });
+        navLinks.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+      }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
+      sections.forEach(function (s) { io.observe(s); });
+
+      /* ---------- Reveal on scroll ---------- */
+      var ro = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); } });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      document.querySelectorAll('.reveal').forEach(function (el) { ro.observe(el); });
     } else {
-      slideDown(el);
+      document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
     }
-  }
 
-  function slideUp(element) {
-    element.style.height = element.scrollHeight + "px";
-    requestAnimationFrame(() => {
-      element.style.transition = "height 0.3s ease";
-      element.style.height = "0px";
+    document.getElementById('year').textContent = String(new Date().getFullYear());
+  })();
+  </script>
+
+  <script>
+  /* =====================================================================
+     Live coreset background.
+     A synthetic point cloud (k anisotropic Gaussian clusters + uniform
+     outliers) is periodically compressed into a coreset chosen by
+     sensitivity sampling (k-means style sensitivities), each selected
+     point drawn with radius ~ sqrt(weight). Non-selected points collapse
+     onto their representative and fade, then everything decompresses.
+     ===================================================================== */
+  (function () {
+    'use strict';
+    var canvas = document.getElementById('bg');
+    if (!canvas || !canvas.getContext) return;
+    var ctx = canvas.getContext('2d');
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var W = 0, H = 0, dpr = 1, pts = [], clusters = [], N = 0, M = 0, wMean = 1;
+    var col = { pt: [125, 211, 252], sel: [246, 183, 60], line: [79, 209, 197], alpha: 0.55 };
+    var PHASES = [['streaming', 6.5], ['compressing', 2.4], ['coreset', 5.0], ['expanding', 2.4]];
+    var CYCLE = 0; PHASES.forEach(function (p) { CYCLE += p[1]; });
+    var t0 = performance.now(), raf = 0, paused = false, pausedAt = 0, lastCycle = 0;
+    var mouse = { x: -1e4, y: -1e4 }, R = 130, R2 = R * R;
+
+    var hudPhase = document.getElementById('hud-phase');
+    var hudStats = document.getElementById('hud-stats');
+    var hudBar = document.getElementById('hud-bar');
+    var hudPause = document.getElementById('hud-pause');
+    var lastPhaseText = '';
+
+    function readTheme() {
+      var cs = getComputedStyle(document.documentElement);
+      function rgb(name, fb) { var v = cs.getPropertyValue(name).trim(); if (!v) return fb; var a = v.split(',').map(function (x) { return +x; }); return a.length === 3 && !a.some(isNaN) ? a : fb; }
+      col.pt = rgb('--pt', col.pt); col.sel = rgb('--pt-sel', col.sel); col.line = rgb('--pt-line', col.line);
+      var a = parseFloat(cs.getPropertyValue('--pt-alpha')); if (!isNaN(a)) col.alpha = a;
+      if (reduce) drawStatic();
+    }
+    window.__bgTheme = readTheme;
+
+    function gauss() { var u = 1 - Math.random(), v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); }
+    function ease(u) { return u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2; }
+    function rgba(c, a) { return 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + a + ')'; }
+    function mix(a, b, s) { return [Math.round(a[0] + (b[0] - a[0]) * s), Math.round(a[1] + (b[1] - a[1]) * s), Math.round(a[2] + (b[2] - a[2]) * s)]; }
+
+    function initPoints() {
+      var area = W * H;
+      N = Math.round(Math.max(240, Math.min(950, area / 1500)));
+      var k = W < 600 ? 4 : (W < 1000 ? 5 : 6);
+      clusters = []; pts = [];
+      var cols = Math.max(1, Math.round(Math.sqrt(k * W / H))), rows = Math.ceil(k / cols);
+      var id = 0, r, c;
+      for (r = 0; r < rows; r++) for (c = 0; c < cols && id < k; c++, id++) {
+        var cx = (c + 0.5 + (Math.random() - 0.5) * 0.45) * W / cols;
+        var cy = (r + 0.5 + (Math.random() - 0.5) * 0.45) * H / rows;
+        var s1 = Math.min(W, H) * (0.07 + Math.random() * 0.09), s2 = s1 * (0.3 + Math.random() * 0.5);
+        clusters.push({ cx: cx, cy: cy, s1: s1, s2: s2, ang: Math.random() * Math.PI, n: 0, d2: 0 });
+      }
+      var noise = Math.round(N * 0.1), i;
+      for (i = 0; i < N; i++) {
+        var x, y, ci;
+        if (i < noise) { x = Math.random() * W; y = Math.random() * H; ci = -1; }
+        else {
+          ci = (i - noise) % clusters.length; var cl = clusters[ci];
+          var dx = gauss() * cl.s1, dy = gauss() * cl.s2, ca = Math.cos(cl.ang), sa = Math.sin(cl.ang);
+          x = cl.cx + dx * ca - dy * sa; y = cl.cy + dx * sa + dy * ca;
+        }
+        pts.push({ hx: x, hy: y, x: x, y: y, c: ci, a: Math.random() * 6.283, f: 0.18 + Math.random() * 0.3, amp: 4 + Math.random() * 9, sel: false, w: 1, rSel: 2, rep: -1 });
+      }
+      // assign every point (incl. outliers) to its nearest cluster center
+      for (i = 0; i < N; i++) {
+        var p = pts[i], best = -1, bd = Infinity, j;
+        for (j = 0; j < clusters.length; j++) { var ddx = p.hx - clusters[j].cx, ddy = p.hy - clusters[j].cy, d = ddx * ddx + ddy * ddy; if (d < bd) { bd = d; best = j; } }
+        p.c = best; p.d2 = bd;
+      }
+      computeCoreset();
+    }
+
+    function computeCoreset() {
+      var i, j;
+      clusters.forEach(function (cl) { cl.n = 0; cl.d2 = 0; });
+      for (i = 0; i < N; i++) { var cl = clusters[pts[i].c]; cl.n++; cl.d2 += pts[i].d2; }
+      // k-means style sensitivity: 1/|cluster| + dist² / Σ dist² (within cluster)
+      var total = 0;
+      for (i = 0; i < N; i++) { var p = pts[i], cl = clusters[p.c]; p.sens = 1 / cl.n + (cl.d2 > 0 ? p.d2 / cl.d2 : 0); total += p.sens; p.sel = false; }
+      M = Math.max(12, Math.round(N * 0.08));
+      // weighted sampling without replacement (Efraimidis–Spirakis keys)
+      var keys = [];
+      for (i = 0; i < N; i++) keys.push([-Math.log(1 - Math.random()) / pts[i].sens, i]);
+      keys.sort(function (a, b) { return a[0] - b[0]; });
+      var sel = [], wsum = 0;
+      for (i = 0; i < M; i++) { var q = pts[keys[i][1]]; q.sel = true; q.w = total / (M * q.sens); wsum += q.w; sel.push(q); }
+      wMean = wsum / M;
+      for (i = 0; i < M; i++) { var s = sel[i]; s.rSel = Math.min(7.5, 1.7 + 2.3 * Math.sqrt(s.w / wMean)); }
+      // each non-selected point collapses onto the nearest selected point of its cluster
+      for (i = 0; i < N; i++) {
+        var p2 = pts[i]; if (p2.sel) continue;
+        var best = -1, bd = Infinity, bestAny = -1, bdAny = Infinity;
+        for (j = 0; j < M; j++) {
+          var q2 = sel[j], dx = p2.hx - q2.hx, dy = p2.hy - q2.hy, d = dx * dx + dy * dy;
+          if (d < bdAny) { bdAny = d; bestAny = j; }
+          if (q2.c === p2.c && d < bd) { bd = d; best = j; }
+        }
+        p2.rep = pts.indexOf(sel[best >= 0 ? best : bestAny]);
+      }
+      // weighted covariance ellipse of the coreset, per cluster
+      clusters.forEach(function (cl, ci) {
+        var sw = 0, mx = 0, my = 0;
+        sel.forEach(function (q) { if (q.c === ci) { sw += q.w; mx += q.w * q.hx; my += q.w * q.hy; } });
+        if (sw <= 0) { cl.ell = null; return; }
+        mx /= sw; my /= sw;
+        var sxx = 0, syy = 0, sxy = 0;
+        sel.forEach(function (q) { if (q.c === ci) { var dx = q.hx - mx, dy = q.hy - my; sxx += q.w * dx * dx; syy += q.w * dy * dy; sxy += q.w * dx * dy; } });
+        sxx /= sw; syy /= sw; sxy /= sw;
+        var tr = (sxx + syy) / 2, det = Math.sqrt(Math.max(0, ((sxx - syy) / 2) * ((sxx - syy) / 2) + sxy * sxy));
+        var l1 = Math.max(1e-6, tr + det), l2 = Math.max(1e-6, tr - det);
+        cl.ell = { x: mx, y: my, a: 2.1 * Math.sqrt(l1), b: 2.1 * Math.sqrt(l2), ang: 0.5 * Math.atan2(2 * sxy, sxx - syy) };
+      });
+      if (hudStats) hudStats.textContent = 'n = ' + N + ' → |S| = ' + M + ' · ' + (N / M).toFixed(1) + '×';
+    }
+
+    function resize() {
+      var nw = window.innerWidth, nh = window.innerHeight;
+      var big = Math.abs(nw - W) > 2 || Math.abs(nh - H) > 140;
+      W = nw; H = nh; dpr = Math.min(window.devicePixelRatio || 1, 2);
+      canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+      canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if (big || !pts.length) initPoints();
+      if (reduce) drawStatic();
+    }
+
+    function phaseAt(t) {
+      var tc = t % CYCLE, acc = 0, i;
+      for (i = 0; i < PHASES.length; i++) { if (tc < acc + PHASES[i][1]) return { name: PHASES[i][0], u: (tc - acc) / PHASES[i][1] }; acc += PHASES[i][1]; }
+      return { name: 'streaming', u: 0 };
+    }
+
+    function render(t, s) {
+      var i, p, q, x, y;
+      ctx.clearRect(0, 0, W, H);
+      // animate positions (gentle drift + cursor repulsion)
+      for (i = 0; i < N; i++) {
+        p = pts[i];
+        p.x = p.hx + Math.sin(t * p.f + p.a) * p.amp;
+        p.y = p.hy + Math.cos(t * p.f * 0.8 + p.a * 1.7) * p.amp;
+        var dx = p.x - mouse.x, dy = p.y - mouse.y, d2 = dx * dx + dy * dy;
+        if (d2 < R2) { var d = Math.sqrt(d2) || 1, f = (1 - d / R) * 26; p.x += dx / d * f; p.y += dy / d * f; }
+      }
+      // assignment lines during transitions
+      if (s > 0.02 && s < 0.98) {
+        ctx.strokeStyle = rgba(col.line, 0.28 * Math.sin(s * Math.PI));
+        ctx.lineWidth = 0.6;
+        ctx.beginPath();
+        for (i = 0; i < N; i++) { p = pts[i]; if (p.sel) continue; q = pts[p.rep]; ctx.moveTo(p.x + (q.x - p.x) * s, p.y + (q.y - p.y) * s); ctx.lineTo(q.x, q.y); }
+        ctx.stroke();
+      }
+      // coreset ellipses
+      if (s > 0.55) {
+        var ea = (s - 0.55) / 0.45;
+        ctx.strokeStyle = rgba(col.sel, 0.28 * ea);
+        ctx.lineWidth = 1;
+        ctx.setLineDash([4, 6]);
+        clusters.forEach(function (cl) {
+          if (!cl.ell) return;
+          ctx.beginPath(); ctx.ellipse(cl.ell.x, cl.ell.y, cl.ell.a, cl.ell.b, cl.ell.ang, 0, 6.2832); ctx.stroke();
+        });
+        ctx.setLineDash([]);
+      }
+      // non-selected points
+      var baseR = 1.45, ghost = col.alpha * 0.12;
+      ctx.fillStyle = rgba(col.pt, 1);
+      for (i = 0; i < N; i++) {
+        p = pts[i]; if (p.sel) continue;
+        q = pts[p.rep]; x = p.x + (q.x - p.x) * s; y = p.y + (q.y - p.y) * s;
+        ctx.globalAlpha = col.alpha * (1 - s) + ghost * s;
+        ctx.beginPath(); ctx.arc(x, y, baseR * (1 - s) + 0.9 * s, 0, 6.2832); ctx.fill();
+      }
+      // selected points (grow with weight, turn amber, soft halo)
+      var c = mix(col.pt, col.sel, s);
+      for (i = 0; i < N; i++) {
+        p = pts[i]; if (!p.sel) continue;
+        var r = baseR + (p.rSel - baseR) * s;
+        if (s > 0.02) {
+          ctx.globalAlpha = 0.16 * s;
+          ctx.fillStyle = rgba(c, 1);
+          ctx.beginPath(); ctx.arc(p.x, p.y, r * 2.4, 0, 6.2832); ctx.fill();
+        }
+        ctx.globalAlpha = col.alpha + (0.95 - col.alpha) * s;
+        ctx.fillStyle = rgba(c, 1);
+        ctx.beginPath(); ctx.arc(p.x, p.y, r, 0, 6.2832); ctx.fill();
+      }
+      ctx.globalAlpha = 1;
+    }
+
+    function updateHud(ph) {
+      if (!hudPhase) return;
+      var label = ph.name === 'streaming' ? 'streaming' : ph.name === 'compressing' ? 'sampling' : ph.name === 'coreset' ? 'coreset' : 'expanding';
+      if (label !== lastPhaseText) { lastPhaseText = label; hudPhase.textContent = label; }
+      hudBar.style.transform = 'scaleX(' + ph.u.toFixed(3) + ')';
+    }
+
+    function frame(now) {
+      var t = (now - t0) / 1000;
+      var cyc = Math.floor(t / CYCLE);
+      if (cyc !== lastCycle) { lastCycle = cyc; computeCoreset(); }
+      var ph = phaseAt(t);
+      var s = ph.name === 'streaming' ? 0 : ph.name === 'compressing' ? ease(ph.u) : ph.name === 'coreset' ? 1 : 1 - ease(ph.u);
+      render(t, s);
+      updateHud(ph);
+      raf = requestAnimationFrame(frame);
+    }
+
+    function drawStatic() { render(0, 1); if (hudPhase) { hudPhase.textContent = 'coreset'; hudBar.style.transform = 'scaleX(1)'; } }
+
+    function setPaused(v) {
+      paused = v;
+      hudPause.textContent = v ? 'play' : 'pause';
+      hudPause.setAttribute('aria-pressed', String(v));
+      if (v) { cancelAnimationFrame(raf); pausedAt = performance.now(); }
+      else { t0 += performance.now() - pausedAt; raf = requestAnimationFrame(frame); }
+    }
+
+    window.addEventListener('pointermove', function (e) { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
+    window.addEventListener('pointerleave', function () { mouse.x = -1e4; mouse.y = -1e4; });
+    var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(resize, 120); });
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) { if (!paused) cancelAnimationFrame(raf); }
+      else if (!paused && !reduce) { t0 = performance.now() - (lastCycle * CYCLE) * 1000; raf = requestAnimationFrame(frame); }
     });
-    setTimeout(() => {
-      element.style.display = "none";
-      element.style.removeProperty("height");
-      element.style.removeProperty("transition");
-    }, 300);
-  }
 
-  function slideDown(element) {
-    element.style.display = "block";
-    const height = element.scrollHeight + "px";
-    element.style.height = "0px";
-    requestAnimationFrame(() => {
-      element.style.transition = "height 0.3s ease";
-      element.style.height = height;
-    });
-    setTimeout(() => {
-      element.style.removeProperty("height");
-      element.style.removeProperty("transition");
-    }, 300);
-  }
-</script>
-
-
+    readTheme();
+    resize();
+    if (reduce) { drawStatic(); if (hudPause) hudPause.style.display = 'none'; }
+    else { hudPause.addEventListener('click', function () { setPaused(!paused); }); raf = requestAnimationFrame(frame); }
+  })();
+  </script>
 </body>
-
 </html>
