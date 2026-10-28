@@ -244,10 +244,15 @@
     .pubs { list-style: none; margin: 0; padding: 0; }
     .year { display: flex; align-items: center; gap: 12px; margin: 26px 0 12px; font-family: var(--font-mono); font-size: 13px; letter-spacing: .12em; color: var(--muted); }
     .year::after { content: ""; flex: 1; height: 1px; background: var(--border); }
-    .pub { display: grid; grid-template-columns: 168px minmax(0, 1fr); gap: 20px; padding: 18px; margin-bottom: 12px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); transition: border-color .2s; }
+    .pub { display: grid; grid-template-columns: 192px minmax(0, 1fr); gap: 20px; padding: 18px; margin-bottom: 12px; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); transition: border-color .2s; }
     .pub:hover { border-color: var(--border-strong); }
-    .pub-thumb { width: 168px; height: 104px; border-radius: 10px; background: var(--plate); border: 1px solid var(--border); display: grid; place-items: center; padding: 6px; overflow: hidden; }
+    .pub-thumb { width: 192px; height: 120px; border-radius: 10px; background: var(--plate); border: 1px solid var(--border); display: grid; place-items: center; padding: 6px; overflow: hidden; }
     .pub-thumb img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+    .pub-thumb.anim { padding: 0; background: #0b1020; border-color: rgba(255, 255, 255, 0.14); transition: transform .25s ease, box-shadow .25s ease; }
+    .pub:hover .pub-thumb.anim { transform: scale(1.03); box-shadow: 0 12px 30px -12px rgba(45, 212, 191, 0.45); }
+    .pub-thumb.anim img { display: none; }
+    .pub-thumb .anim-canvas { display: block; width: 100%; height: 100%; }
+    .abs-fig { float: right; width: min(300px, 46%); margin: 14px 0 10px 18px; padding: 6px; background: var(--plate); border: 1px solid var(--border); border-radius: 10px; }
     .pub-venue { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 8px; padding: 3px 10px; border-radius: 999px; background: rgba(var(--accent-rgb), .12); color: var(--accent); font-family: var(--font-mono); font-size: 12px; }
     .pub h3 { font-family: var(--font-head); font-weight: 600; font-size: 17.5px; line-height: 1.3; margin: 0 0 6px; letter-spacing: -0.01em; }
     .pub-authors { margin: 0 0 12px; color: var(--text-2); font-size: 14.5px; }
@@ -261,12 +266,13 @@
     .subhead { font-family: var(--font-head); font-weight: 600; font-size: 1.25rem; margin: 40px 0 6px; letter-spacing: -0.01em; }
     @media (max-width: 640px) {
       .pub { grid-template-columns: 96px minmax(0, 1fr); gap: 14px; padding: 14px; }
-      .pub-thumb { width: 96px; height: 64px; padding: 4px; border-radius: 8px; }
+      .pub-thumb { width: 96px; height: 60px; padding: 4px; border-radius: 8px; }
       .pub h3 { font-size: 16px; }
+      .abs-fig { float: none; width: 100%; margin: 14px 0 0; }
     }
     @media (max-width: 420px) {
       .pub { grid-template-columns: 1fr; }
-      .pub-thumb { width: 100%; height: 96px; }
+      .pub-thumb { width: 100%; height: 110px; }
     }
 
     /* Teaching */
@@ -481,7 +487,7 @@
             <li class="year" aria-hidden="true">2024</li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/practical.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="submodular"><img src="images/practical.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">NeurIPS 2024</span>
                 <h3>Practical 0.385-Approximation for Submodular Maximization Subject to a Cardinality Constraint</h3>
@@ -498,7 +504,7 @@
             </li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/drifters.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="drifters"><img src="images/drifters.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">IEEE J. Oceanic Engineering 2024</span>
                 <h3>An Efficient Drifters Deployment Strategy to Evaluate Water Current Velocity Fields</h3>
@@ -515,7 +521,7 @@
             </li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/bridging.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="bridging"><img src="images/bridging.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">IJCAI 2024</span>
                 <h3>Bridging the Gap Between General and Down-Closed Convex Sets in Submodular Maximization</h3>
@@ -534,7 +540,7 @@
             <li class="year" aria-hidden="true">2023</li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/provable_distillation.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="distill-theory"><img src="images/provable_distillation.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">NeurIPS 2023</span>
                 <h3>On the Size and Approximation Error of Distilled Datasets</h3>
@@ -550,7 +556,7 @@
             </li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/rbfnn_coreset.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="rbfnn"><img src="images/rbfnn_coreset.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">ICML 2023</span>
                 <h3>Provable Data Subset Selection for Efficient Neural Networks Training</h3>
@@ -567,7 +573,7 @@
             </li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/autocoreset.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="autocoreset"><img src="images/autocoreset.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">ICML 2023</span>
                 <h3>AutoCoreset: An Automatic Practical Coreset Construction Framework</h3>
@@ -586,7 +592,7 @@
             <li class="year" aria-hidden="true">2022</li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/prune.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="pruning"><img src="images/prune.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">NeurIPS 2022</span>
                 <h3>Pruning Neural Networks via Coresets and Convex Geometry: Towards No Assumptions</h3>
@@ -602,7 +608,7 @@
             </li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/obstacleawareness.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="obstacle"><img src="images/obstacleawareness.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">IROS 2022</span>
                 <h3>Obstacle Aware Sampling for Path Planning</h3>
@@ -618,7 +624,7 @@
             </li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/projective.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="projective"><img src="images/projective.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">AISTATS 2022</span>
                 <h3>New Coresets for Projective Clustering and Applications</h3>
@@ -635,7 +641,7 @@
             </li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/sinecoreset.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="sine"><img src="images/sinecoreset.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">AISTATS 2022</span>
                 <h3>Coresets for Data Discretization and Sine Wave Fitting</h3>
@@ -654,7 +660,7 @@
             <li class="year" aria-hidden="true">2021</li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/svmcoreset.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="svm"><img src="images/svmcoreset.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">Theoretical Computer Science 2021</span>
                 <h3>On Coresets for Support Vector Machines</h3>
@@ -673,7 +679,7 @@
             <li class="year" aria-hidden="true">2020</li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/setclustering.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="sets"><img src="images/setclustering.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">ICML 2020</span>
                 <h3>Sets Clustering</h3>
@@ -690,7 +696,7 @@
             </li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/unified.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="nearconvex"><img src="images/unified.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">NeurIPS 2020</span>
                 <h3>Coresets for Near-Convex Functions</h3>
@@ -710,7 +716,7 @@
           <h3 class="subhead" id="preprints">Preprints</h3>
           <ol class="pubs">
             <li class="pub">
-              <div class="pub-thumb"><img src="images/spuraudio.jpg" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="spuraudio"><img src="images/spuraudio.jpg" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">arXiv 2026</span>
                 <h3>SpurAudio: A Benchmark for Studying Shortcut Learning in Few-Shot Audio Classification</h3>
@@ -727,7 +733,7 @@
             </li>
 
             <li class="pub">
-              <div class="pub-thumb"><img src="images/provable_init_distillation.png" alt="" loading="lazy"></div>
+              <div class="pub-thumb" data-anim="distill-select"><img src="images/provable_init_distillation.png" alt="" loading="lazy"></div>
               <div>
                 <span class="pub-venue">arXiv 2023</span>
                 <h3>Dataset Distillation Meets Provable Subset Selection</h3>
@@ -811,6 +817,11 @@
       btn.addEventListener('click', function () {
         var panel = document.getElementById(btn.getAttribute('aria-controls'));
         var open = btn.getAttribute('aria-expanded') === 'true';
+        if (!open && !panel.__fig) {
+          panel.__fig = true;
+          var li = btn.closest('.pub'), thumb = li && li.querySelector('.pub-thumb.anim img');
+          if (thumb) { var fig = document.createElement('img'); fig.className = 'abs-fig'; fig.src = thumb.getAttribute('src'); fig.alt = ''; panel.firstElementChild.insertBefore(fig, panel.firstElementChild.firstChild); }
+        }
         btn.setAttribute('aria-expanded', String(!open));
         panel.classList.toggle('open', !open);
       });
@@ -1075,5 +1086,6 @@
     else { hudPause.addEventListener('click', function () { setPaused(!paused); }); raf = requestAnimationFrame(frame); }
   })();
   </script>
+  <script src="js/paper-anims.js" defer></script>
 </body>
 </html>
